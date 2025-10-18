@@ -1,4 +1,4 @@
-# Strategic Exam Guide for Operating System (G2.5_p)
+# Strategic Exam Guide for Operating System (CS4.5)
 
 This guide is engineered from 7 past papers to provide a high-probability path to scoring 35+ marks with focused effort.
 
