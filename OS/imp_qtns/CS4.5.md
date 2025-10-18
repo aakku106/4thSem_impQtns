@@ -1,233 +1,512 @@
-# Strategic Exam Guide for Operating System (CS4.5)
+# Operating System - Strategic Study Plan (Target: 35+ Marks)
 
-This guide is engineered from 7 past papers to provide a high-probability path to scoring 35+ marks with focused effort.
+## 📊 Overall Strategy
 
----
-
-## 🎯 **The 35+ Marks Strategy: A Three-Tiered Approach**
-
-Focus on mastering Tier 1 completely, then move to Tier 2. This alone will secure your target. Tier 3 is for pushing your score higher if you have extra time.
-
-### **Tier 1: The "Guaranteed Marks" Core (Secure 20-25 Marks)**
-
-These topics are your highest priority. They appear consistently and form the backbone of the exam. Master these first.
-
-| Topic                             | Unit | Type | Frequency | What to Master                                                                                                                                                                                       | Expected Marks |
-| :-------------------------------- | :--- | :--- | :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------- |
-| **CPU Scheduling Algorithms**     | 2    | Long | **6/7**   | **Algorithms**: FCFS, SJF, SRTN, RR, Priority. Calculate Average Waiting Time (AWT) and Average Turnaround Time (ATT) for given processes. Draw Gantt charts. Know advantages/disadvantages of each. | **10**         |
-| **Page Replacement Algorithms**   | 4    | Long | **6/7**   | **Algorithms**: FIFO, LRU, Optimal (OPR), Second Chance, Clock. Given a reference string, calculate page faults for each algorithm. Understand Belady's Anomaly.                                     | **10**         |
-| **Disk Scheduling Algorithms**    | 6    | Long | **5/7**   | **Algorithms**: FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK. Calculate total seek time for given disk requests. Draw diagrams showing head movement.                                                      | **10**         |
-| **Deadlock (Banker's Algorithm)** | 3    | Long | **3/7**   | **Concepts**: Safe vs Unsafe states. Given allocation/max/available matrices, determine if system is in safe state. Check if resource requests can be granted.                                       | **5-10**       |
-
-**Outcome of Tier 1**: By mastering just these four computational topics, you are positioned to answer **two guaranteed long questions**, securing **20 marks**. These are the most frequent and formulaic questions—easy marks if you practice the algorithms.
+- **Full Marks**: 60 (2 Long × 10 + 8 Short × 5)
+- **Pass Marks**: 24
+- **Your Target**: 35+ marks
+- **Strategy**: Focus on high-frequency computational topics with good return on investment
 
 ---
 
-### **Tier 2: The "High-Probability" Booster (Add 15-20 Marks)**
+## 🎯 Question Pattern Analysis (7 Sets Analyzed)
 
-These topics appear frequently as short questions. They are quick to learn and offer a great return on time invested.
+## 🎯 Question Pattern Analysis (7 Sets Analyzed)
 
-| Topic                            | Unit | Type  | Frequency | What to Master                                                                                                                          | Expected Marks |
-| :------------------------------- | :--- | :---- | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------- | :------------- |
-| **System Calls & Modes**         | 1    | Short | **4/7**   | **Concepts**: User mode vs Kernel mode. How system calls work. Examples of system calls (fork, exec, open, read).                       | **5**          |
-| **Process vs Thread**            | 2    | Short | **4/7**   | **Differences**: Resource sharing, creation overhead, context switching cost. When to use threads. User-level vs Kernel-level threads.  | **5**          |
-| **Mutual Exclusion Techniques**  | 2    | Short | **5/7**   | **Methods**: Disabling interrupts, Lock variables, Peterson's solution, Semaphores, Monitors. Understand busy waiting and its problems. | **5**          |
-| **Memory Allocation Strategies** | 4    | Short | **4/7**   | **Strategies**: First Fit, Best Fit, Worst Fit, Next Fit. Given memory holes and process sizes, show where processes are allocated.     | **5**          |
-| **File Allocation Methods**      | 5    | Short | **4/7**   | **Methods**: Contiguous, Linked List, FAT, I-nodes. Advantages and disadvantages of each. Calculate disk space overhead for FAT.        | **5**          |
-| **Fragmentation**                | 4    | Short | **3/7**   | **Types**: Internal vs External fragmentation. Examples of when each occurs. Solutions (compaction, paging).                            | **5**          |
+### Section A - Long Questions (Attempt 2 out of 3) - 20 Marks Total
 
-**Outcome of Tier 2**: Mastering this tier prepares you for **5-6 additional short questions**, adding another **25-30 marks** to your score. These are conceptual and easier to prepare quickly.
+| Topic/Chapter                                                           | Frequency | Years Appeared                                | Priority       | Expected Marks |
+| ----------------------------------------------------------------------- | --------- | --------------------------------------------- | -------------- | -------------- |
+| **CPU Scheduling Algorithms** (FCFS, SJF, SRTN, RR, Priority)           | 7/7       | 2076, 2078, 2079, 2080, 2080_new, 2081, Model | ⭐⭐⭐ HIGHEST | 10 marks       |
+| **Page Replacement Algorithms** (FIFO, LRU, OPR, Second Chance, Clock)  | 6/7       | 2076, 2078, 2079, 2080, 2080_new, Model       | ⭐⭐⭐ HIGHEST | 10 marks       |
+| **Disk Scheduling Algorithms** (FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK) | 5/7       | 2076, 2079, 2080_new, 2081, Model             | ⭐⭐⭐ HIGHEST | 10 marks       |
+| **Banker's Algorithm** (Safe/Unsafe State, Resource Request)            | 3/7       | 2078, 2079, Model                             | ⭐⭐⭐ HIGH    | 10 marks       |
+| **Sleep & Wakeup Mechanism** (Lost Wakeup Problem)                      | 2/7       | 2078, Model                                   | ⭐⭐ MEDIUM    | 10 marks       |
+| **Race Condition & Critical Section**                                   | 2/7       | 2079, 2080                                    | ⭐⭐ MEDIUM    | 10 marks       |
+| **Sleeping Barber Problem**                                             | 1/7       | 2081                                          | ⭐ LOW         | 10 marks       |
+| **File Allocation & I-nodes**                                           | 1/7       | Model                                         | ⭐ LOW         | 10 marks       |
+| **Segmentation** (Logical to Physical Address)                          | 1/7       | 2081                                          | ⭐ LOW         | 10 marks       |
+| **DMA Operation**                                                       | 1/7       | 2080_new                                      | ⭐ LOW         | 10 marks       |
+| **Directory Systems** (Single-level, Two-level)                         | 1/7       | 2079                                          | ⭐ LOW         | 10 marks       |
+| **System Calls & User/Kernel Mode**                                     | 1/7       | 2080                                          | ⭐ LOW         | 10 marks       |
 
-**Combined Tier 1 + Tier 2 Score Projection: 45-50 Marks**
+### Section B - Short Questions (Attempt 8 out of 12) - 40 Marks Total
 
----
-
-### **Tier 3: The "Safety Net" Topics (Secure 5-10 Extra Marks)**
-
-If you have more time, learn these. They appear often enough to be valuable backups.
-
-| Topic                                  | Unit | Type       | Frequency | What to Master                                                                                                                                         |
-| :------------------------------------- | :--- | :--------- | :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Race Condition & Critical Section**  | 2    | Short/Long | 3/7       | What causes race conditions. Critical section problem. Solutions and their requirements (mutual exclusion, progress, bounded waiting).                 |
-| **Deadlock Detection & Prevention**    | 3    | Short      | 3/7       | Resource Allocation Graph. Cycle detection for single instance. Conditions for deadlock (mutual exclusion, hold & wait, no preemption, circular wait). |
-| **Paging vs Segmentation**             | 4    | Short      | 3/7       | Differences in approach, advantages, disadvantages. Segmentation with paging (MULTICS). Address translation.                                           |
-| **DMA Operation**                      | 6    | Short      | 3/7       | How DMA works. Benefits over programmed I/O. Role of DMA controller.                                                                                   |
-| **Directory Systems**                  | 5    | Short      | 3/7       | Single-level, Two-level, Hierarchical. Advantages and disadvantages of each.                                                                           |
-| **TLB (Translation Lookaside Buffer)** | 4    | Short      | 3/7       | Purpose of TLB. How it speeds up paging. Structure and operation.                                                                                      |
-
----
-
-## 🗺️ **Your Study Roadmap**
-
-Follow this plan for efficient preparation.
-
-| **Priority**     | **Chapter Focus**              | **Topics to Master**                                                                                                                      | **Goal**                                                            |
-| :--------------- | :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ |
-| **1. MUST DO**   | **Unit 2: Process Management** | CPU Scheduling (FCFS, SJF, SRTN, RR, Priority), Process vs Thread, Mutual Exclusion, Critical Section.                                    | Secure **15-20 marks**. Most important unit—appears in every paper. |
-| **2. MUST DO**   | **Unit 4: Memory Management**  | Page Replacement (FIFO, LRU, Optimal, Second Chance), Memory Allocation (First Fit, Best Fit, Worst Fit), Paging concepts, Fragmentation. | Secure **15-20 marks**. Second most important computational unit.   |
-| **3. MUST DO**   | **Unit 6: Device Management**  | Disk Scheduling (FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK), DMA Operation.                                                                  | Secure **10-15 marks**. Guaranteed computational long question.     |
-| **4. SHOULD DO** | **Unit 3: Deadlock**           | Banker's Algorithm (safe state), Deadlock conditions, Resource Allocation Graph, Detection and Prevention.                                | Secure **10 marks**. Often appears as long question.                |
-| **5. SHOULD DO** | **Unit 5: File Management**    | File Allocation (Contiguous, Linked, FAT, I-nodes), Directory Systems, Free Space Management.                                             | Secure **5-10 marks**. Frequent short questions.                    |
-| **6. CAN DO**    | **Unit 1: OS Overview**        | System Calls, User vs Kernel mode, OS Structures.                                                                                         | Secure **5 marks**. Basic concepts.                                 |
-
-By following this roadmap, you prioritize the units that give you the most marks and ensure you pass comfortably.
+| Topic/Chapter                                                     | Frequency | Priority       | Expected Marks |
+| ----------------------------------------------------------------- | --------- | -------------- | -------------- |
+| **Memory Allocation Strategies** (First Fit, Best Fit, Worst Fit) | 5/7       | ⭐⭐⭐ MUST DO | 5 marks        |
+| **System Calls & User/Kernel Mode**                               | 5/7       | ⭐⭐⭐ MUST DO | 5 marks        |
+| **Mutual Exclusion Techniques** (Locks, Semaphores, Monitors)     | 5/7       | ⭐⭐⭐ MUST DO | 5 marks        |
+| **Process vs Thread**                                             | 4/7       | ⭐⭐⭐ HIGH    | 5 marks        |
+| **File Allocation Methods** (Contiguous, Linked, FAT, I-nodes)    | 4/7       | ⭐⭐⭐ HIGH    | 5 marks        |
+| **Deadlock Conditions & Detection**                               | 4/7       | ⭐⭐⭐ HIGH    | 5 marks        |
+| **Paging vs Segmentation**                                        | 3/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **DMA Operation**                                                 | 3/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **Race Condition**                                                | 3/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **TLB Structure & Operation**                                     | 3/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **Fragmentation** (Internal vs External)                          | 3/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **Directory Systems**                                             | 2/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **Belady's Anomaly**                                              | 2/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **Multiprogramming Benefits**                                     | 2/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **Free Space Management** (Bitmap, Linked List)                   | 2/7       | ⭐⭐ MEDIUM    | 5 marks        |
+| **Interrupt Advantages**                                          | 1/7       | ⭐ LOW         | 5 marks        |
+| **IPC in Linux**                                                  | 2/7       | ⭐ LOW         | 5 marks        |
+| **RAID**                                                          | 2/7       | ⭐ LOW         | 5 marks        |
 
 ---
 
-## 📊 **Detailed Frequency Analysis**
+## 🎓 Chapter-Wise Importance & Expected Marks
 
-### **Long Questions (Attempt 2 out of 3) - 20 Marks Total**
-
-| Topic                         | Frequency | Years Appeared                          | Calculation Type                                          | Expected Marks |
-| :---------------------------- | :-------: | :-------------------------------------- | :-------------------------------------------------------- | :------------: |
-| CPU Scheduling Algorithms     |  **6/7**  | 2076, 2078, 2079, 2080, 2080_new, Model | Calculate AWT, ATT for FCFS/SJF/SRTN/RR/Priority          |     **10**     |
-| Page Replacement Algorithms   |  **6/7**  | 2076, 2078, 2079, 2080, 2080_new, Model | Count page faults for FIFO/LRU/OPR/Clock                  |     **10**     |
-| Disk Scheduling Algorithms    |  **5/7**  | 2076, 2079, 2080, 2080_new, 2081, Model | Calculate seek time for FCFS/SSTF/SCAN/C-SCAN/LOOK/C-LOOK |     **10**     |
-| Banker's Algorithm (Deadlock) |  **3/7**  | 2078, 2079, Model                       | Safe state check, resource request validation             |    **8-10**    |
-| Sleep & Wakeup Problem        |  **2/7**  | 2078, Model                             | Code snippet, explain lost wakeup problem                 |    **7-9**     |
-| Sleeping Barber Problem       |  **1/7**  | 2081                                    | Classical IPC problem with semaphores                     |    **7-9**     |
-| File Allocation & I-nodes     |  **1/7**  | Model                                   | Compare methods, calculate space overhead                 |    **8-10**    |
-| Segmentation                  |  **1/7**  | 2081                                    | Logical to physical address translation                   |    **8-10**    |
-
-**Strategy**: Always pick **CPU Scheduling** and **Page Replacement** as your first two long questions if available. They appear in 6 out of 7 papers and are purely computational (easy to score full marks with practice).
+| Chapter                | Unit   | Importance | Expected Questions   | Target Marks |
+| ---------------------- | ------ | ---------- | -------------------- | ------------ |
+| **Process Management** | Unit 2 | ⭐⭐⭐⭐⭐ | 1 Long + 4-5 Short   | 30-35 marks  |
+| **Memory Management**  | Unit 4 | ⭐⭐⭐⭐⭐ | 1 Long + 3-4 Short   | 25-30 marks  |
+| **Device Management**  | Unit 6 | ⭐⭐⭐⭐   | 1 Long + 2-3 Short   | 20-25 marks  |
+| **Process Deadlocks**  | Unit 3 | ⭐⭐⭐⭐   | 0-1 Long + 2-3 Short | 15-20 marks  |
+| **File Management**    | Unit 5 | ⭐⭐⭐     | 0-1 Long + 2-3 Short | 15-20 marks  |
+| **OS Overview**        | Unit 1 | ⭐⭐       | 0-1 Long + 1-2 Short | 10-15 marks  |
+| **Linux Case Study**   | Unit 7 | ⭐         | 0 Long + 1-2 Short   | 5-10 marks   |
 
 ---
 
-### **Short Questions (Attempt 8 out of 12) - 40 Marks Total**
+## 📚 MUST STUDY Topics (To Secure 35+ Marks)
 
-| Topic                           | Frequency | What to Remember                                             | Expected Marks |
-| :------------------------------ | :-------: | :----------------------------------------------------------- | :------------: |
-| Mutual Exclusion Techniques     |  **5/7**  | Lock variables, Semaphores, Monitors, Busy waiting issues    |     **5**      |
-| Memory Allocation Strategies    |  **4/7**  | First Fit, Best Fit, Worst Fit, Next Fit—with examples       |     **5**      |
-| System Calls & User/Kernel Mode |  **4/7**  | Definition, examples, mode switching process                 |     **5**      |
-| Process vs Thread               |  **4/7**  | Key differences, when to use threads, user vs kernel threads |     **5**      |
-| File Allocation Methods         |  **4/7**  | Contiguous, Linked, FAT, I-nodes—pros and cons               |     **5**      |
-| Deadlock Conditions/Detection   |  **3/7**  | 4 conditions, Resource Allocation Graph, prevention methods  |     **5**      |
-| Fragmentation                   |  **3/7**  | Internal vs External, examples, solutions                    |     **5**      |
-| Paging vs Segmentation          |  **3/7**  | Comparison table, address translation                        |     **5**      |
-| DMA Operation                   |  **3/7**  | How it works, benefits over programmed I/O                   |     **5**      |
-| Directory Systems               |  **3/7**  | Single-level, Two-level, Hierarchical                        |     **5**      |
-| TLB Structure & Operation       |  **3/7**  | Purpose, how it speeds up address translation                |     **5**      |
-| Race Condition                  |  **3/7**  | What it is, why it occurs, example scenario                  |     **5**      |
-| Belady's Anomaly                |  **2/7**  | Definition, example with FIFO                                |     **5**      |
-| Multiprogramming Benefits       |  **2/7**  | CPU utilization formula                                      |     **5**      |
-| Free Space Management           |  **2/7**  | Bitmap, Linked list methods                                  |     **5**      |
+### 🔴 Priority 1: MUST MASTER (Will give you 25-30 marks)
 
-**Strategy**: Always attempt questions on **Mutual Exclusion**, **Memory Allocation**, **System Calls**, **Process vs Thread**, and **File Allocation** if they appear—these are your highest probability short questions.
+#### For Long Questions (Pick 2)
+
+1. **CPU Scheduling Algorithms** (Appears in ALL 7 papers!)
+
+   - FCFS (First Come First Served)
+   - SJF (Shortest Job First)
+   - SRTN (Shortest Remaining Time Next)
+   - Round Robin (with time quantum)
+   - Priority Scheduling
+   - Calculate: Average Waiting Time (AWT), Average Turnaround Time (ATT)
+   - Draw Gantt charts
+   - **Study Time**: 5-6 hours (Practice 10+ problems)
+
+2. **Page Replacement Algorithms** (Appears in 6/7 papers!)
+
+   - FIFO (First In First Out)
+   - LRU (Least Recently Used)
+   - Optimal (OPR)
+   - Second Chance
+   - Clock Algorithm
+   - Calculate: Number of Page Faults
+   - Understand: Belady's Anomaly
+   - **Study Time**: 4-5 hours (Practice 10+ problems)
+
+3. **Disk Scheduling Algorithms** (Appears in 5/7 papers!)
+   - FCFS
+   - SSTF (Shortest Seek Time First)
+   - SCAN
+   - C-SCAN
+   - LOOK
+   - C-LOOK
+   - Calculate: Total Seek Time
+   - Draw: Disk head movement diagrams
+   - **Study Time**: 4-5 hours (Practice 8+ problems)
+
+#### For Short Questions (Pick 8)
+
+4. **Memory Allocation Strategies** (5/7 papers!)
+
+   - First Fit
+   - Best Fit
+   - Worst Fit
+   - Next Fit
+   - Practice with numerical problems
+   - **Study Time**: 2-3 hours
+
+5. **System Calls & User/Kernel Mode** (5/7 papers!)
+
+   - What are system calls?
+   - How system calls are handled
+   - User mode vs Kernel mode switching
+   - Examples: fork, exec, open, read, write
+   - **Study Time**: 2 hours
+
+6. **Mutual Exclusion Techniques** (5/7 papers!)
+   - Disabling Interrupts
+   - Lock Variables (problems with it)
+   - Semaphores (wait and signal operations)
+   - Monitors
+   - Understand busy waiting problem
+   - **Study Time**: 3 hours
+
+### 🟡 Priority 2: STUDY WELL (Will give you 10-15 marks)
+
+7. **Banker's Algorithm** (3/7 papers - but important!)
+
+   - Calculate Need matrix: Need = Max - Allocation
+   - Check if system is in safe state
+   - Find safe sequence
+   - Check if resource request can be granted
+   - **Study Time**: 3-4 hours (Practice 5+ problems)
+
+8. **Process vs Thread** (4/7 papers!)
+
+   - Key differences (memory, overhead, context switching)
+   - User-level vs Kernel-level threads
+   - When to use threads
+   - **Study Time**: 1-2 hours
+
+9. **File Allocation Methods** (4/7 papers!)
+
+   - Contiguous Allocation (pros & cons)
+   - Linked List Allocation (pros & cons)
+   - File Allocation Table (FAT)
+   - I-nodes (advantages)
+   - **Study Time**: 2-3 hours
+
+10. **Deadlock Concepts** (4/7 papers!)
+
+    - Four conditions for deadlock
+    - Resource Allocation Graph
+    - Deadlock vs Starvation
+    - Prevention, Avoidance, Detection, Recovery
+    - **Study Time**: 2-3 hours
+
+11. **Paging vs Segmentation** (3/7 papers!)
+
+    - Comparison table
+    - Logical to physical address translation
+    - Advantages and disadvantages
+    - **Study Time**: 2 hours
+
+12. **DMA Operation** (3/7 + 1/7 long = 4/7 papers!)
+    - How DMA works
+    - Benefits over Programmed I/O
+    - DMA controller role
+    - **Study Time**: 1-2 hours
+
+### 🟢 Priority 3: GOOD TO KNOW (For extra marks if time permits)
+
+13. **Race Condition** (3/7 papers!)
+
+    - What causes race conditions
+    - Example scenarios
+    - Why it leads to data loss
+    - **Study Time**: 1 hour
+
+14. **TLB (Translation Lookaside Buffer)** (3/7 papers!)
+
+    - Structure and purpose
+    - How it speeds up address translation
+    - **Study Time**: 1 hour
+
+15. **Fragmentation** (3/7 papers!)
+
+    - Internal vs External fragmentation
+    - Examples
+    - Solutions (compaction, paging)
+    - **Study Time**: 1 hour
+
+16. **Directory Systems** (2/7 + 1/7 long papers!)
+
+    - Single-level directory
+    - Two-level directory
+    - Hierarchical directory
+    - **Study Time**: 1-2 hours
+
+17. **Belady's Anomaly** (2/7 papers!)
+
+    - Definition
+    - Example with FIFO
+    - **Study Time**: 30 minutes
+
+18. **Multiprogramming** (2/7 papers!)
+    - Benefits over uniprogramming
+    - CPU utilization formula: 1 - p^n
+    - **Study Time**: 1 hour
 
 ---
 
-## 📝 **Quick Formulas & Key Concepts**
+## 📋 Strategic Study Plan (Minimum Time - Maximum Marks)
 
-### **CPU Scheduling**
+### Week 1 (Priority 1 Topics - 25-30 marks coverage)
 
-- **Turnaround Time (TAT)** = Completion Time - Arrival Time
-- **Waiting Time (WT)** = Turnaround Time - Burst Time
-- **Average WT** = Sum of all WT / Number of processes
-- **Average TAT** = Sum of all TAT / Number of processes
+| Day   | Topic                                                          | Time    | Type  |
+| ----- | -------------------------------------------------------------- | ------- | ----- |
+| Day 1 | CPU Scheduling - FCFS, SJF, SRTN                               | 4 hours | Long  |
+| Day 2 | CPU Scheduling - RR, Priority (Practice 10 problems)           | 4 hours | Long  |
+| Day 3 | Page Replacement - FIFO, LRU, OPR                              | 4 hours | Long  |
+| Day 4 | Page Replacement - Second Chance, Clock (Practice 10 problems) | 3 hours | Long  |
+| Day 5 | Disk Scheduling - FCFS, SSTF, SCAN                             | 3 hours | Long  |
+| Day 6 | Disk Scheduling - C-SCAN, LOOK, C-LOOK (Practice 8 problems)   | 3 hours | Long  |
+| Day 7 | Memory Allocation + System Calls + Mutual Exclusion            | 4 hours | Short |
 
-### **Memory Management**
+### Week 2 (Priority 2 & 3 Topics - 10-15 marks coverage)
 
-- **Degree of Multiprogramming** = Number of processes in memory
-- **CPU Utilization** = 1 - p^n (where p = I/O wait probability, n = number of processes)
-- **Page Fault**: Occurs when referenced page is not in memory
+| Day    | Topic                                                | Time    | Type       |
+| ------ | ---------------------------------------------------- | ------- | ---------- |
+| Day 8  | Banker's Algorithm (Practice 5 problems)             | 4 hours | Long/Short |
+| Day 9  | Process vs Thread + File Allocation Methods          | 3 hours | Short      |
+| Day 10 | Deadlock Concepts + Paging vs Segmentation           | 3 hours | Short      |
+| Day 11 | DMA + Race Condition + TLB                           | 3 hours | Short      |
+| Day 12 | Fragmentation + Directory Systems + Belady's Anomaly | 3 hours | Short      |
+| Day 13 | Multiprogramming + Free Space + IPC in Linux         | 3 hours | Short      |
+| Day 14 | Full Revision + Practice Previous Years              | 4 hours | All        |
 
-### **Disk Scheduling**
-
-- **Seek Time** = Number of cylinders traversed × time per cylinder
-- **Total Seek Time** = Sum of all seeks
-- **SCAN**: Move in one direction to the end, then reverse
-- **C-SCAN**: Move in one direction to the end, jump to start, continue
-- **LOOK**: Move in one direction until last request, then reverse
-
-### **Deadlock (Banker's Algorithm)**
-
-- **Need[i,j]** = Max[i,j] - Allocation[i,j]
-- **Safe State**: Exists a sequence where all processes can finish
-- **Grant Request**: Only if resulting state is safe
-
----
-
-## 💡 **Answer Writing Tips**
-
-### **For Long Questions (10 marks):**
-
-**CPU Scheduling / Page Replacement / Disk Scheduling:**
-
-1. Write the given data clearly (1 mark)
-2. Show step-by-step calculation with proper formatting (6 marks)
-3. Draw Gantt chart / Page frame diagram / Disk head movement diagram (2 marks)
-4. Calculate final answer (AWT/ATT or Page Faults or Seek Time) (1 mark)
-
-**Banker's Algorithm:**
-
-1. Calculate Need matrix (2 marks)
-2. Check if system is in safe state (show sequence) (4 marks)
-3. For resource request, check if it can be granted (3 marks)
-4. Conclusion (1 mark)
-
-### **For Short Questions (5 marks):**
-
-- Definition/Introduction (1 mark)
-- Main explanation with 3-4 points or steps (2-3 marks)
-- Diagram/Example/Table (1-2 marks)
-- Be precise, use bullet points, keep it structured
+**Total Study Time**: ~45 hours over 2 weeks
 
 ---
 
-## ✅ **Final Checklist Before Exam**
+## 🎯 Exam Day Strategy
 
-**Must Practice (Guarantee 35+ marks):**
+### Section A (Long Questions - Choose 2 out of 3)
 
-- [ ] Can solve 5+ CPU Scheduling problems (FCFS, SJF, SRTN, RR, Priority)
-- [ ] Can solve 5+ Page Replacement problems (FIFO, LRU, OPR, Second Chance)
-- [ ] Can solve 5+ Disk Scheduling problems (FCFS, SSTF, SCAN, C-SCAN, LOOK)
-- [ ] Know how to check safe state using Banker's Algorithm
-- [ ] Can explain 4-5 mutual exclusion techniques
-- [ ] Know differences between Process vs Thread
-- [ ] Can solve memory allocation problems (First Fit, Best Fit, Worst Fit)
-- [ ] Understand file allocation methods (Contiguous, Linked, FAT, I-nodes)
+**Goal**: Score 18-20 out of 20 marks
 
-**Backup Knowledge:**
+**Look for these topics first (in order)**:
 
-- [ ] Know 4 deadlock conditions and prevention methods
-- [ ] Understand Race Condition and Critical Section
-- [ ] Can explain Paging vs Segmentation
-- [ ] Know DMA operation and benefits
-- [ ] Understand TLB structure and operation
+1. ✅ **CPU Scheduling** → **10 marks** (MUST DO - appears in ALL papers!)
+2. ✅ **Page Replacement** → **10 marks** (MUST DO - appears in 6/7 papers!)
+3. ✅ **Disk Scheduling** → **10 marks** (High probability - 5/7 papers)
+4. ✅ **Banker's Algorithm** → **8-9 marks** (Good backup - 3/7 papers)
+
+**Time Management**: 35-40 minutes per question
+
+**Answer Structure for Computational Questions**:
+
+- Write given data clearly (1 mark)
+- Show step-by-step calculation (6 marks)
+- Draw diagrams (Gantt chart / Page frames / Disk movement) (2 marks)
+- Calculate final answer (AWT, ATT, Page Faults, Seek Time) (1 mark)
+
+### Section B (Short Questions - Choose 8 out of 12)
+
+**Goal**: Score 32-36 out of 40 marks
+
+**Must attempt if you see**:
+
+1. ✅ **Memory Allocation Strategies** → **5 marks** (5/7 papers - practice problem)
+2. ✅ **System Calls** → **4-5 marks** (5/7 papers - theory)
+3. ✅ **Mutual Exclusion** → **4-5 marks** (5/7 papers - theory)
+4. ✅ **Process vs Thread** → **4-5 marks** (4/7 papers - comparison)
+5. ✅ **File Allocation Methods** → **4-5 marks** (4/7 papers - theory)
+6. ✅ **Deadlock Conditions** → **4-5 marks** (4/7 papers - theory)
+7. ✅ **Paging vs Segmentation** → **4 marks** (3/7 papers - comparison)
+8. ✅ **Any other topic you studied** → **3-4 marks**
+
+**Time Management**: 10-12 minutes per question
 
 ---
 
-## 🚀 **Confidence Booster**
+## 📊 Expected Marks Distribution
+
+| Section           | Questions        | Target Marks | Actual Marks Achievable |
+| ----------------- | ---------------- | ------------ | ----------------------- |
+| Section A (Long)  | 2 questions      | 20           | 18-20 marks             |
+| Section B (Short) | 8 questions      | 40           | 28-36 marks             |
+| **TOTAL**         | **10 questions** | **60**       | **46-56 marks** ✅      |
+
+**With this strategy, you should easily cross 35+ marks and potentially score 50+ marks!**
+
+---
+
+## 💡 Quick Tips
+
+### Writing Long Answers (10 marks)
+
+#### For Computational Questions (CPU/Page/Disk Scheduling, Banker's Algorithm)
+
+- ✅ Write all given data in organized format (1 mark)
+- ✅ Show formula if applicable (0.5 mark)
+- ✅ Show step-by-step calculation clearly (5-6 marks)
+- ✅ Draw required diagrams (Gantt chart, Page table, Disk movement) (2 marks)
+- ✅ Write final answer with proper units (1 mark)
+- ✅ Box the final answer
+
+#### For Theory Questions
+
+- ✅ Write definition/introduction (1-2 marks)
+- ✅ Explain working/concept with steps (4-5 marks)
+- ✅ Draw diagrams/flowcharts (2-3 marks)
+- ✅ Write advantages/disadvantages or comparison if asked (1-2 marks)
+
+### Writing Short Answers (5 marks)
+
+- ✅ Definition (1 mark)
+- ✅ Main explanation with 3-4 points (2-3 marks)
+- ✅ Diagram/example/table if applicable (1-2 marks)
+- ✅ Be precise and to the point
+- ✅ Use bullet points for clarity
+
+### For Numerical Problems
+
+- ✅ Write the formula first
+- ✅ Show all steps clearly (don't skip steps)
+- ✅ Use tables for organizing data
+- ✅ Box the final answer
+- ✅ Double-check calculations
+
+---
+
+## 📝 Quick Formulas & Key Concepts
+
+### CPU Scheduling
+
+```
+Completion Time = Time when process finishes execution
+Turnaround Time (TAT) = Completion Time - Arrival Time
+Waiting Time (WT) = Turnaround Time - Burst Time
+Response Time = Time of first execution - Arrival Time
+
+Average WT = Sum of all WT / Number of processes
+Average TAT = Sum of all TAT / Number of processes
+```
+
+### Memory Management
+
+```
+CPU Utilization = 1 - p^n
+where: p = I/O wait probability
+       n = number of processes in memory
+
+Logical Address = (Page Number, Page Offset)
+Physical Address = (Frame Number, Page Offset)
+```
+
+### Disk Scheduling
+
+```
+Seek Time = Number of cylinders traversed
+Total Seek Time = Sum of all individual seeks
+
+SCAN: Move in one direction to end, then reverse
+C-SCAN: Move in one direction to end, jump to start
+LOOK: Move to last request, then reverse
+C-LOOK: Move to last request, jump to first request on other end
+```
+
+### Deadlock (Banker's Algorithm)
+
+```
+Need[i,j] = Max[i,j] - Allocation[i,j]
+
+Safe State: There exists a safe sequence where all processes can finish
+Grant Request: Only if resulting state is safe
+```
+
+### Page Replacement
+
+```
+Page Fault: When referenced page is not in memory
+Hit Ratio = (Total References - Page Faults) / Total References
+Miss Ratio = Page Faults / Total References
+```
+
+---
+
+## 🎁 Bonus: Most Repeated Concepts
+
+### For "Short Notes" Type Questions
+
+Practice these topics (usually 2-3 marks each):
+
+- **Virtual Memory** - concept and benefits
+- **Race Condition** - what it is and example
+- **Working Set** - definition and purpose
+- **I-node** - structure and advantages
+- **RAID** - levels 0, 1, 5
+- **IPC in Linux** - pipes, shared memory, message queues
+- **Linux Scheduling** - O(1) scheduler, CFS
+- **Resource Allocation Graph** - how to detect deadlocks
+- **Fragmentation** - internal vs external
+- **Monitor** - concept and how it differs from semaphore
+
+---
+
+## ✅ Final Checklist Before Exam
+
+### Must Practice (Guarantee 35+ marks)
+
+- [ ] Solved 10+ CPU Scheduling problems (all 5 algorithms)
+- [ ] Solved 10+ Page Replacement problems (FIFO, LRU, OPR, Clock)
+- [ ] Solved 8+ Disk Scheduling problems (all 6 algorithms)
+- [ ] Solved 5+ Banker's Algorithm problems (safe state check)
+- [ ] Solved 5+ Memory Allocation problems (First/Best/Worst Fit)
+- [ ] Can explain System Calls and mode switching
+- [ ] Know all Mutual Exclusion techniques (especially Semaphores)
+- [ ] Can write differences: Process vs Thread
+- [ ] Can write differences: Paging vs Segmentation
+- [ ] Know all File Allocation methods with pros/cons
+- [ ] Know 4 Deadlock conditions
+- [ ] Understand Race Condition with example
+
+### Theory Concepts to Memorize
+
+- [ ] 4 Deadlock conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait)
+- [ ] Belady's Anomaly definition and example
+- [ ] CPU Utilization formula: 1 - p^n
+- [ ] Process states and state transition diagram
+- [ ] Page Table structure
+- [ ] TLB working mechanism
+- [ ] DMA operation steps
+- [ ] Directory system types
+- [ ] Fragmentation types and solutions
+
+---
+
+## 🚀 Confidence Booster
 
 **You need only 35 marks, but this plan can get you 50+ marks!**
 
-**Guaranteed Topics** (appear in 5-6/7 papers):
+### Guaranteed Topics (appear in 5-7/7 papers)
 
-- CPU Scheduling → 10 marks
-- Page Replacement → 10 marks
-- Disk Scheduling → 10 marks
-- Mutual Exclusion → 5 marks
-- Memory Allocation → 5 marks
-- System Calls → 5 marks
+- **CPU Scheduling** → 10 marks (7/7 papers!)
+- **Page Replacement** → 10 marks (6/7 papers!)
+- **Disk Scheduling** → 10 marks (5/7 papers!)
+- **Memory Allocation** → 5 marks (5/7 papers!)
+- **System Calls** → 5 marks (5/7 papers!)
+- **Mutual Exclusion** → 5 marks (5/7 papers!)
 
 **Total from just these 6 topics: 45 marks** ✅
 
-**Plus Easy Backups:**
+### Easy Backups
 
-- Process vs Thread → 5 marks
-- File Allocation → 5 marks
-- Deadlock concepts → 5 marks
+- **Process vs Thread** → 5 marks (4/7 papers)
+- **File Allocation** → 5 marks (4/7 papers)
+- **Deadlock concepts** → 5 marks (4/7 papers)
 
 **Grand Total: 50+ marks easily achievable!**
 
 ---
 
-### 📞 Remember:
+## 📞 Important Remember
 
-> "OS exam rewards practice over theory. Do the calculations daily, and you'll ace the exam!"
+> **"OS exam rewards practice over theory. Do computational problems daily, and you'll ace the exam!"**
 
-**The most important advice**: Practice at least 10 problems each for CPU Scheduling, Page Replacement, and Disk Scheduling. These three alone can get you 30 marks (3 long questions worth).
+### The Golden Rule
+
+- **Practice makes perfect** - Especially for CPU Scheduling, Page Replacement, and Disk Scheduling
+- **Understand, don't memorize** - Understand the logic behind algorithms
+- **Time management** - Spend more time on computational questions (they give full marks easily)
+- **Answer selection** - In Section B, pick questions you're 100% confident about
+
+### Last Day Before Exam
+
+- Revise all formulas
+- Solve 2-3 problems of each computational topic
+- Quick revision of comparison tables (Process vs Thread, Paging vs Segmentation)
+- Review your short notes
+- Sleep well - fresh mind performs better!
+
+---
+
+## 🎯 Success Mantra
+
+```
+Master 3 Computational Topics → 30 marks (Long Questions)
+Master 5-6 Theory Topics → 25 marks (Short Questions)
+= 55 marks total
+Your target: 35+ marks ✅
+Safety margin: 20 marks!
+```
+
+**You've got this! Follow this plan, practice daily, and success is guaranteed! 🎯**
 
 ---
 
