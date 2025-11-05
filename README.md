@@ -1,7 +1,6 @@
 # 4th Semester BSc.CSIT Exam Preparation Materials
 
-   ![](https://komarev.com/ghpvc/?username=4thsem&abbreviated=true&base=1&label=PROFILE+VIEWS&style=for-the-badge)
-
+![](https://komarev.com/ghpvc/?username=4thsem&abbreviated=true&base=1&label=PROFILE+VIEWS&style=for-the-badge)
 
 ## 📚 Overview
 
@@ -75,4 +74,4 @@ This material is for educational purposes only. Please use responsibly and maint
 
 ---
 
-_Last Updated: October 18, 2025_
+_Last Updated: November 5, 2025_
