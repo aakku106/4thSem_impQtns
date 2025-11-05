@@ -3,7 +3,7 @@ Section A
 Attempt any two questions.
 
 1
-What do you mean by heuristic search? Given following state space representation, show how greedy best firsh and A* search is used to find the goal state.
+What do you mean by heuristic search? Given following state space representation, show how greedy best firsh and A\* search is used to find the goal state.
 [image](./AiModelQtnPic1.jpg.webp)
 
 S is the start state and G is the goal state. The heuristics of the states are:
