@@ -1,5 +1,8 @@
 # 4th Semester BSc.CSIT Exam Preparation Materials
 
+   ![](https://komarev.com/ghpvc/?username=4thsem&abbreviated=true&base=1&label=PROFILE+VIEWS&style=for-the-badge)
+
+
 ## 📚 Overview
 
 This repository contains comprehensive exam preparation materials for 4th semester BSc.CSIT students, carefully curated and analyzed using multiple advanced AI models.
