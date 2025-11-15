@@ -1,84 +1,94 @@
-# CN Exam: 2-Day Emergency Study Plan (23 Hours)
+# CN in 23 Hours: The Emergency Pass-Mark Plan
 
-This plan is designed for one purpose: to get you over the 24-mark pass line by focusing only on the most repeated, highest-value topics.
-
-**Core Strategy:** Master one long question and three short questions perfectly. This will secure **25 marks**. Everything else is a bonus.
+**Goal:** Score 25+ marks with 23 hours of focused study.
+**Strategy:** Don't try to learn everything. Master a few high-frequency, high-value topics. We will target **one guaranteed long question (10 marks)** and **3-4 easy short questions (15-20 marks)**.
 
 ---
 
 ## 🗓️ Day 1: Secure the Pass Mark (12 Hours)
 
-The goal for today is to lock in ~25 marks.
+### **Session 1: The Guaranteed Long Question (5 Hours)**
 
-### Slot 1: Routing Algorithms (5 Hours)
+- **Topic: Routing Algorithms (Distance Vector)**
+  - **Why:** This is the **most repeated long question** on the exam. It's a mechanical process that is easy to master and guarantees 10 marks.
+  - **What to Learn:**
+    1. The concept of Distance Vector (sharing routing tables with neighbors).
+    2. The Bellman-Ford algorithm steps.
+    3. How to create and update routing tables from a given network diagram.
+    4. The "count-to-infinity" problem and a simple solution (e.g., split horizon).
+  - **Action:** Watch a tutorial on "Distance Vector Routing example". Practice with at least 3 past paper diagrams until you can create and update the tables correctly.
+  - **Past Questions:** 2076, 2078, 2079, 2080, 2080_new, Model.
 
-- **Goal**: Master one Long Question (10 Marks).
-- **Topic**: Distance Vector (DV) Routing.
-- **What to do**:
-  - Understand the Bellman-Ford algorithm.
-  - Learn to create and update routing tables from a network diagram.
-  - Practice with a 4-5 node example.
-  - Know 2-3 key differences between Distance Vector and Link State.
+### **Session 2: The Must-Do Short Questions (7 Hours)**
 
-### Slot 2: Subnetting (4 Hours)
+- **Topic 1: Subnetting (4 hours)**
 
-- **Goal**: Master one Short Question (5 Marks).
-- **Topic**: Subnetting Calculations.
-- **What to do**: Practice at least 5 problems. Given an IP and CIDR (e.g., `192.168.10.0/27`), you must be able to quickly find:
-  1. Subnet Mask
-  2. Total Subnets & Hosts per Subnet
-  3. Network Address of a subnet
-  4. Broadcast Address of a subnet
-  5. Valid Host Range
+  - **Why:** This is a **guaranteed 5-mark short question** that appears in every single exam. It's pure calculation.
+  - **What to Learn:** Given an IP and a CIDR (e.g., `/27`) or a number of required subnets, you must be able to find:
+    1. The new Subnet Mask.
+    2. The total number of subnets and valid hosts per subnet.
+    3. The Network Address and Broadcast Address for a given subnet.
+    4. The range of valid host IPs in that subnet.
+  - **Action:** Practice at least 5-10 different subnetting problems from past papers or online. Focus on speed and accuracy.
+  - **Past Questions:** 2076, 2078, 2079, 2080, 2080_new, 2081, Model.
 
-### Slot 3: Switching & Topologies (3 Hours)
-
-- **Goal**: Master two Short Questions (10 Marks).
-- **Topics**:
-  - **Switching**: Learn the definitions, pros, and cons of Circuit Switching vs. Packet Switching.
-  - **Topologies**: Be able to draw and list one advantage/disadvantage for Star, Bus, and Ring topologies.
-
-**End of Day 1 Check:** You can now confidently answer one long question (10 marks) and three short questions (15 marks). **Total: 25 Marks Secured.**
+- **Topic 2: Switching & Topologies (3 hours)**
+  - **Why:** These are very common, easy-to-memorize short questions.
+  - **What to Learn:**
+    - **Switching:** The key differences between Circuit Switching and Packet Switching (connection setup, resource allocation, cost, example use cases).
+    - **Topologies:** Be able to draw, define, and list one advantage and one disadvantage for Star, Bus, and Ring topologies.
+  - **Action:** Create a comparison table for the switching types. Draw the topologies and write down their pros/cons until you can do it from memory.
+  - **Past Questions (Switching):** 2076, 2079, 2080, 2080_new, Model.
+  - **Past Questions (Topologies):** 2076, 2079, 2080, 2080_new.
 
 ---
 
 ## 🗓️ Day 2: Build the Safety Net (11 Hours)
 
-The goal for today is to learn a backup long question and several easy short questions to guarantee you have choices in the exam.
+### **Session 3: The Backup & High-Yield Topics (8 Hours)**
 
-### Slot 4: Flow Control (4 Hours)
+- **Topic 3: Flow Control (Stop-and-Wait ARQ) (4 hours)**
 
-- **Goal**: Learn a backup Long Question (10 Marks).
-- **Topic**: Stop-and-Wait ARQ.
-- **What to do**:
-  - Learn how it handles errors (lost frames, lost ACKs).
-  - Practice drawing the timeline diagrams for these scenarios.
-  - Know its main limitation (inefficiency).
+  - **Why:** This is the second most common long question. It's your backup if the routing question is difficult. It's also a frequent short question.
+  - **What to Learn:**
+    1. The basic mechanism of Stop-and-Wait (send one frame, wait for ACK).
+    2. How to draw the timeline diagrams for handling a **lost data frame** and a **lost ACK**. This is the most important part.
+    3. Its main disadvantage (inefficiency).
+  - **Action:** Practice drawing the two error-handling diagrams. This is what examiners look for.
+  - **Past Questions:** 2076, 2078, 2080, 2080_new.
 
-### Slot 5: More Short Questions (4 Hours)
+- **Topic 4: More High-Yield Short Questions (4 hours)**
+  - **Why:** These topics appear frequently and are quick to learn.
+  - **What to Learn:**
+    - **IPv4 vs. IPv6:** Create a comparison table covering Address Size, Header Format, Security (IPSec), and Configuration (Manual vs. Auto).
+    - **Traffic Shaping:** Understand the basic logic and draw the diagrams for Leaky Bucket (fixed output rate) and Token Bucket (allows bursts).
+  - **Action:** Memorize the IPv4 vs. IPv6 table. Practice drawing the bucket diagrams and writing a one-sentence explanation for each.
+  - **Past Questions (IPv4/v6):** 2078, 2080, 2081, Model.
+  - **Past Questions (Traffic Shaping):** 2080, 2080_new, 2081.
 
-- **Goal**: Learn two more Short Questions (10 Marks).
-- **Topics**:
-  - **IPv4 vs. IPv6**: Create a simple comparison table (Address Size, Header Format, Security, Configuration).
-  - **Traffic Shaping**: Understand the basic idea and diagrams for Leaky Bucket (fixed output rate) and Token Bucket (allows bursts).
+### **Session 4: Final Review (3 Hours)**
 
-### Slot 6: Final Review (3 Hours)
-
-- **Goal**: Revise and solidify knowledge.
-- **What to do**:
-  - Quickly review Day 1 topics: DV Routing and Subnetting.
-  - Learn the key differences between TCP (reliable, connection-oriented) and UDP (unreliable, connectionless).
-
-**End of Day 2 Check:** You can now confidently answer **two** long questions and **five** short questions. This gives you options and a very high chance of scoring **40+ marks**.
+- **Topic 5: Final Review & Key Definitions**
+  - **Why:** Solidify your knowledge and pick up easy definition marks.
+  - **What to Learn:**
+    - **TCP vs. UDP:** Key differences (connection-oriented vs. connectionless, reliability, header size).
+    - **MAC vs. LLC:** The two sublayers of the Data Link Layer and their primary function.
+  - **Action:** Quickly review all the topics from Day 1. Write down the key differences for TCP/UDP and MAC/LLC on a cheat sheet.
+  - **Past Questions (TCP/UDP):** 2080, 2080_new.
+  - **Past Questions (MAC/LLC):** 2076, 2078, 2080, 2080_new, 2081, Model.
 
 ---
 
 ## 🎯 Exam Day Game Plan
 
-1. **Read the paper carefully.**
-2. **Section A (Long Questions):** Immediately look for **Routing (DV/LS)** or **Flow Control (ARQ)**. Pick one and answer it perfectly. This is your first priority.
-3. **Section B (Short Questions):** Immediately find the **Subnetting** question. Solve it carefully. This is a guaranteed 5 marks.
-4. Next, find and answer **Switching**, **Topologies**, and **IPv4 vs IPv6**.
-5. Now, attempt your second long question and the remaining short questions from the topics you prepared.
+1. **Section A (Long Questions):**
 
-Good luck. Focus on these topics and you will pass.
+    - **Priority 1:** Find the **Routing Algorithm** question. Solve it. This is your main target.
+    - **Priority 2 (Backup):** If routing isn't there or is confusing, solve the **Flow Control (ARQ)** question.
+
+2. **Section B (Short Questions):**
+    - **Priority 1:** Find and solve the **Subnetting** question first. It's guaranteed marks.
+    - **Priority 2:** Answer **Switching**, **Topologies**, and **IPv4 vs. IPv6**.
+    - **Priority 3:** Answer **Traffic Shaping**, **TCP vs. UDP**, and **MAC/LLC**.
+
+By following this plan, you are targeting a very safe **35-40 marks**. Good luck!
