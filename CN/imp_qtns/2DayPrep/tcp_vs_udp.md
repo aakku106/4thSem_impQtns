@@ -23,14 +23,14 @@ Choosing between TCP and UDP depends on the application's requirements for relia
 
 ### Key Characteristics:
 
-*   **Reliable:** Guarantees that data will be delivered, and in the correct order.
-*   **Connection-Oriented:** Requires a connection to be set up before data transfer.
-*   **Heavyweight:** The handshakes, acknowledgements, sequencing, and error checking create significant overhead. This makes TCP slower than UDP.
-*   **Header Size:** 20 bytes (or more with options).
-*   **Use Cases:** Applications where reliability is more important than speed.
-    *   Web browsing (HTTP/HTTPS)
-    *   Email (SMTP, POP3)
-    *   File Transfer (FTP)
+- **Reliable:** Guarantees that data will be delivered, and in the correct order.
+- **Connection-Oriented:** Requires a connection to be set up before data transfer.
+- **Heavyweight:** The handshakes, acknowledgements, sequencing, and error checking create significant overhead. This makes TCP slower than UDP.
+- **Header Size:** 20 bytes (or more with options).
+- **Use Cases:** Applications where reliability is more important than speed.
+  - Web browsing (HTTP/HTTPS)
+  - Email (SMTP, POP3)
+  - File Transfer (FTP)
 
 ---
 
@@ -49,25 +49,25 @@ Choosing between TCP and UDP depends on the application's requirements for relia
 
 ### Key Characteristics:
 
-*   **Unreliable:** No guarantee of delivery, order, or duplicate protection.
-*   **Connectionless:** Just send the data without setting up a connection.
-*   **Lightweight:** Very little overhead. This makes UDP very fast.
-*   **Header Size:** 8 bytes.
-*   **Use Cases:** Applications where speed is more important than reliability.
-    *   Live video/audio streaming (VoIP)
-    *   Online gaming
-    *   DNS (Domain Name System)
+- **Unreliable:** No guarantee of delivery, order, or duplicate protection.
+- **Connectionless:** Just send the data without setting up a connection.
+- **Lightweight:** Very little overhead. This makes UDP very fast.
+- **Header Size:** 8 bytes.
+- **Use Cases:** Applications where speed is more important than reliability.
+  - Live video/audio streaming (VoIP)
+  - Online gaming
+  - DNS (Domain Name System)
 
 ---
 
 ## Summary Comparison Table
 
-| Feature | TCP (Transmission Control Protocol) | UDP (User Datagram Protocol) |
-| :--- | :--- | :--- |
-| **Connection** | Connection-oriented | Connectionless |
-| **Reliability** | High (guaranteed delivery and order) | Low (best-effort, no guarantees) |
-| **Speed** | Slower | Faster |
-| **Overhead** | High | Low |
-| **Header Size** | 20+ bytes | 8 bytes |
-| **Error Checking** | Extensive (sequencing, ACKs, retransmission) | Basic (checksum only) |
-| **Use Cases** | Web, Email, File Transfer | Streaming, Gaming, DNS |
+| Feature            | TCP (Transmission Control Protocol)          | UDP (User Datagram Protocol)     |
+| :----------------- | :------------------------------------------- | :------------------------------- |
+| **Connection**     | Connection-oriented                          | Connectionless                   |
+| **Reliability**    | High (guaranteed delivery and order)         | Low (best-effort, no guarantees) |
+| **Speed**          | Slower                                       | Faster                           |
+| **Overhead**       | High                                         | Low                              |
+| **Header Size**    | 20+ bytes                                    | 8 bytes                          |
+| **Error Checking** | Extensive (sequencing, ACKs, retransmission) | Basic (checksum only)            |
+| **Use Cases**      | Web, Email, File Transfer                    | Streaming, Gaming, DNS           |
