@@ -10,10 +10,10 @@
 
 ## The Basic Mechanism
 
-1.  **Sender:** Sends a single data frame (e.g., Frame 0) and starts a timer.
-2.  **Receiver:** Receives the frame. If it's not an error, it sends an ACK back to the sender (e.g., ACK 1, acknowledging Frame 0 and expecting Frame 1 next).
-3.  **Sender:** Receives the ACK, stops the timer, and sends the next frame in the sequence (Frame 1).
-4.  This process repeats.
+1. **Sender:** Sends a single data frame (e.g., Frame 0) and starts a timer.
+2. **Receiver:** Receives the frame. If it's not an error, it sends an ACK back to the sender (e.g., ACK 1, acknowledging Frame 0 and expecting Frame 1 next).
+3. **Sender:** Receives the ACK, stops the timer, and sends the next frame in the sequence (Frame 1).
+4. This process repeats.
 
 ```mermaid
 sequenceDiagram
@@ -42,11 +42,11 @@ If a data frame is lost in transit, the receiver never gets it and therefore nev
 
 **Process:**
 
-1.  **Sender** sends Frame 0 and starts its timer.
-2.  The frame is lost. The **Receiver** does nothing because it received nothing.
-3.  The **Sender's** timer expires.
-4.  Since the Sender did not receive an ACK for Frame 0, it assumes the frame was lost and **re-transmits** Frame 0.
-5.  The Receiver gets the re-transmitted Frame 0 and sends ACK 1. The process continues.
+1. **Sender** sends Frame 0 and starts its timer.
+2. The frame is lost. The **Receiver** does nothing because it received nothing.
+3. The **Sender's** timer expires.
+4. Since the Sender did not receive an ACK for Frame 0, it assumes the frame was lost and **re-transmits** Frame 0.
+5. The Receiver gets the re-transmitted Frame 0 and sends ACK 1. The process continues.
 
 **Diagram:**
 
@@ -75,13 +75,13 @@ If the data frame is successfully received, but the ACK sent back by the receive
 
 **Process:**
 
-1.  **Sender** sends Frame 0 and starts its timer.
-2.  **Receiver** correctly receives Frame 0 and sends ACK 1.
-3.  The ACK is lost in transit.
-4.  The **Sender's** timer expires because it never received ACK 1.
-5.  The Sender assumes the original frame was lost and **re-transmits Frame 0**.
-6.  The **Receiver** gets a duplicate copy of Frame 0. Because it was expecting Frame 1, it knows this is a duplicate. It **discards the duplicate frame** and sends ACK 1 again.
-7.  The Sender receives ACK 1 and finally sends Frame 1.
+1. **Sender** sends Frame 0 and starts its timer.
+2. **Receiver** correctly receives Frame 0 and sends ACK 1.
+3. The ACK is lost in transit.
+4. The **Sender's** timer expires because it never received ACK 1.
+5. The Sender assumes the original frame was lost and **re-transmits Frame 0**.
+6. The **Receiver** gets a duplicate copy of Frame 0. Because it was expecting Frame 1, it knows this is a duplicate. It **discards the duplicate frame** and sends ACK 1 again.
+7. The Sender receives ACK 1 and finally sends Frame 1.
 
 **Diagram:**
 

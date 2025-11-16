@@ -10,17 +10,17 @@ Distance Vector Routing is a type of dynamic routing algorithm where routers sha
 
 Distance Vector protocols use the Bellman-Ford algorithm to find the shortest path. The process for each router is:
 
-1.  **Initialization:**
+1. **Initialization:**
 
     - The distance to itself is 0.
     - The distance to directly connected neighbors is a known cost (e.g., 1 hop).
     - The distance to all other routers is initially set to infinity (∞).
 
-2.  **Sharing:**
+2. **Sharing:**
 
     - Periodically, each router sends its entire routing table (a "distance vector") to all of its direct neighbors.
 
-3.  **Updating (The Bellman-Ford Logic):**
+3. **Updating (The Bellman-Ford Logic):**
     - When a router (let's call it `A`) receives a distance vector from its neighbor (`B`), it iterates through the destinations in that vector.
     - For each destination (`D`), router `A` calculates a new potential distance: `Cost_to_D_via_B = Cost_from_A_to_B + Cost_from_B_to_D`.
     - `A` then compares this new calculated cost with the existing cost it has for `D` in its own table.
@@ -69,7 +69,7 @@ Initially, each router only knows about its direct neighbors.
 
 ### Sharing and Updating
 
-1.  **A receives B's table:**
+1. **A receives B's table:**
     - **Path to C:** A sees B has a path to C with cost 2. A calculates its path to C via B: `Cost(A->B) + Cost(B->C) = 1 + 2 = 3`. This is **better** than A's current cost of 4. A updates its table.
     - **Path to D:** A sees B has a path to D with cost 3. A calculates its path to D via B: `Cost(A->B) + Cost(B->D) = 1 + 3 = 4`. This is **better** than infinity. A updates its table.
 
@@ -92,11 +92,11 @@ This is a major drawback of Distance Vector routing. It occurs when a link fails
 
 **Scenario:**
 
-1.  The link between `B` and `D` in our example goes down. `B`'s cost to `D` becomes ∞.
-2.  Before `B` can inform `A`, `A` sends its table, advertising it can reach `D` with a cost of 4 (via `B`).
-3.  `B` sees this and thinks, "Oh, `A` has a path to `D`! I can get to `A` in 1 hop, so my new path to `D` is via `A` with a cost of `1 + 4 = 5`." `B` updates its table.
-4.  In the next update, `A` sees `B`'s cost to `D` is now 5. `A`'s path to `D` is through `B`, so it updates its cost to `1 + 5 = 6`.
-5.  This continues, with `A` and `B` feeding each other bad information, and the cost to `D` slowly "counts to infinity."
+1. The link between `B` and `D` in our example goes down. `B`'s cost to `D` becomes ∞.
+2. Before `B` can inform `A`, `A` sends its table, advertising it can reach `D` with a cost of 4 (via `B`).
+3. `B` sees this and thinks, "Oh, `A` has a path to `D`! I can get to `A` in 1 hop, so my new path to `D` is via `A` with a cost of `1 + 4 = 5`." `B` updates its table.
+4. In the next update, `A` sees `B`'s cost to `D` is now 5. `A`'s path to `D` is through `B`, so it updates its cost to `1 + 5 = 6`.
+5. This continues, with `A` and `B` feeding each other bad information, and the cost to `D` slowly "counts to infinity."
 
 ### Solution: Split Horizon
 

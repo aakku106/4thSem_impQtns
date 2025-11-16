@@ -12,9 +12,9 @@ The goal is to regulate the average rate and burstiness of data transmission. Th
 
 **Mechanism:**
 
-1.  The network sends packets into a finite-sized queue (the bucket).
-2.  The queue has a single "leak" (the output), which transmits packets at a fixed, constant rate, regardless of how fast they arrive.
-3.  If the bucket is full when a new packet arrives, the packet is discarded.
+1. The network sends packets into a finite-sized queue (the bucket).
+2. The queue has a single "leak" (the output), which transmits packets at a fixed, constant rate, regardless of how fast they arrive.
+3. If the bucket is full when a new packet arrives, the packet is discarded.
 
 **Diagram:**
 
@@ -44,10 +44,10 @@ graph TD
 
 **Mechanism:**
 
-1.  A "token generator" creates tokens at a fixed rate (`r`) and adds them to a bucket with a fixed capacity (`b`).
-2.  To transmit a packet, the router must have a token. It consumes one token per packet.
-3.  If the bucket is empty, the router must wait for a new token to be generated.
-4.  If the bucket is full of tokens, newly generated tokens are discarded.
+1. A "token generator" creates tokens at a fixed rate (`r`) and adds them to a bucket with a fixed capacity (`b`).
+2. To transmit a packet, the router must have a token. It consumes one token per packet.
+3. If the bucket is empty, the router must wait for a new token to be generated.
+4. If the bucket is full of tokens, newly generated tokens are discarded.
 
 **Diagram:**
 

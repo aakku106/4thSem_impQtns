@@ -12,9 +12,9 @@ In networking, switching refers to how a network moves data from a source to a d
 
 **Process:**
 
-1.  **Connection Setup:** A dedicated path is reserved from source to destination. This causes an initial delay.
-2.  **Data Transfer:** Data is transferred at a guaranteed, constant rate.
-3.  **Connection Teardown:** The circuit is terminated, and the resources are released.
+1. **Connection Setup:** A dedicated path is reserved from source to destination. This causes an initial delay.
+2. **Data Transfer:** Data is transferred at a guaranteed, constant rate.
+3. **Connection Teardown:** The circuit is terminated, and the resources are released.
 
 **Key Characteristics:**
 
@@ -32,9 +32,9 @@ In networking, switching refers to how a network moves data from a source to a d
 
 **Process:**
 
-1.  **Data is Packetized:** The message is divided into packets, each with a header containing destination information.
-2.  **Store and Forward:** Packets are sent from one router to the next. Each router receives a full packet, stores it briefly, and then forwards it to the next hop.
-3.  **No Dedicated Path:** Packets can take different routes to the destination.
+1. **Data is Packetized:** The message is divided into packets, each with a header containing destination information.
+2. **Store and Forward:** Packets are sent from one router to the next. Each router receives a full packet, stores it briefly, and then forwards it to the next hop.
+3. **No Dedicated Path:** Packets can take different routes to the destination.
 
 **Key Characteristics:**
 

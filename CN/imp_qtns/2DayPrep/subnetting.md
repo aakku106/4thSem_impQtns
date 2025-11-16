@@ -29,11 +29,11 @@ Let's solve a typical exam question.
 
 **Question:** You are given the IP address `192.168.10.0` and need to create at least 5 subnets. For the 3rd subnet, find:
 
-1.  The new Subnet Mask.
-2.  The total number of subnets and valid hosts per subnet.
-3.  The Network Address.
-4.  The Broadcast Address.
-5.  The range of valid host IPs.
+1. The new Subnet Mask.
+2. The total number of subnets and valid hosts per subnet.
+3. The Network Address.
+4. The Broadcast Address.
+5. The range of valid host IPs.
 
 ### Step 1: Find the Number of Bits to Borrow
 

@@ -12,16 +12,16 @@ Choosing between TCP and UDP depends on the application's requirements for relia
 
 **Core Idea:** TCP is a **connection-oriented** protocol that provides a **reliable, ordered, and error-checked** delivery of a stream of bytes between applications.
 
-### How it Works:
+### How it Works
 
-1.  **Three-Way Handshake:** Before any data is sent, TCP establishes a connection between the sender and receiver using a three-step process (SYN, SYN-ACK, ACK). This ensures both ends are ready to communicate.
-2.  **Data Transfer & Sequencing:** Data is broken into segments. Each segment is given a sequence number. The receiver uses these numbers to reassemble the data in the correct order.
-3.  **Acknowledgement (ACK):** The receiver sends acknowledgements back to the sender to confirm that it has received the segments.
-4.  **Error Control & Retransmission:** If the sender doesn't receive an ACK for a segment within a certain time, it assumes the segment was lost and re-transmits it. It also has checksums to detect corrupted data.
-5.  **Flow Control:** TCP uses a sliding window protocol to ensure the sender doesn't overwhelm the receiver with too much data at once.
-6.  **Connection Termination:** When the conversation is over, the connection is formally closed.
+1. **Three-Way Handshake:** Before any data is sent, TCP establishes a connection between the sender and receiver using a three-step process (SYN, SYN-ACK, ACK). This ensures both ends are ready to communicate.
+2. **Data Transfer & Sequencing:** Data is broken into segments. Each segment is given a sequence number. The receiver uses these numbers to reassemble the data in the correct order.
+3. **Acknowledgement (ACK):** The receiver sends acknowledgements back to the sender to confirm that it has received the segments.
+4. **Error Control & Retransmission:** If the sender doesn't receive an ACK for a segment within a certain time, it assumes the segment was lost and re-transmits it. It also has checksums to detect corrupted data.
+5. **Flow Control:** TCP uses a sliding window protocol to ensure the sender doesn't overwhelm the receiver with too much data at once.
+6. **Connection Termination:** When the conversation is over, the connection is formally closed.
 
-### Key Characteristics:
+### Key Characteristics
 
 - **Reliable:** Guarantees that data will be delivered, and in the correct order.
 - **Connection-Oriented:** Requires a connection to be set up before data transfer.
@@ -40,14 +40,14 @@ Choosing between TCP and UDP depends on the application's requirements for relia
 
 **Core Idea:** UDP is a **connectionless** protocol that provides a simple, low-overhead, and unreliable "best-effort" datagram service.
 
-### How it Works:
+### How it Works
 
-1.  **No Handshake:** You just send the data. There is no pre-established connection.
-2.  **Data is sent in Datagrams:** Data is sent in simple packets called datagrams.
-3.  **No ACKs, No Sequencing:** UDP does not number the datagrams and does not wait for acknowledgements. It just keeps sending.
-4.  **No Error Control:** While it has a checksum to detect corruption, it does not attempt to re-transmit lost packets. Error recovery is left to the application layer.
+1. **No Handshake:** You just send the data. There is no pre-established connection.
+2. **Data is sent in Datagrams:** Data is sent in simple packets called datagrams.
+3. **No ACKs, No Sequencing:** UDP does not number the datagrams and does not wait for acknowledgements. It just keeps sending.
+4. **No Error Control:** While it has a checksum to detect corruption, it does not attempt to re-transmit lost packets. Error recovery is left to the application layer.
 
-### Key Characteristics:
+### Key Characteristics
 
 - **Unreliable:** No guarantee of delivery, order, or duplicate protection.
 - **Connectionless:** Just send the data without setting up a connection.
