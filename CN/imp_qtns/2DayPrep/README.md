@@ -10,6 +10,7 @@
 ### **Session 1: The Guaranteed Long Question (5 Hours)**
 
 - **Topic: Routing Algorithms (Distance Vector)**
+  - **[Go to Answer](./distance_vector_routing.md)**
   - **Why:** This is the **most repeated long question** on the exam. It's a mechanical process that is easy to master and guarantees 10 marks.
   - **What to Learn:**
     1. The concept of Distance Vector (sharing routing tables with neighbors).
@@ -23,6 +24,8 @@
 
 - **Topic 1: Subnetting (4 hours)**
 
+  - **[Go to Answer](./subnetting.md)**
+
   - **Why:** This is a **guaranteed 5-mark short question** that appears in every single exam. It's pure calculation.
   - **What to Learn:** Given an IP and a CIDR (e.g., `/27`) or a number of required subnets, you must be able to find:
     1. The new Subnet Mask.
@@ -33,6 +36,7 @@
   - **Past Questions:** 2076, 2078, 2079, 2080, 2080_new, 2081, Model.
 
 - **Topic 2: Switching & Topologies (3 hours)**
+  - **[Go to Answer](./switching_and_topologies.md)**
   - **Why:** These are very common, easy-to-memorize short questions.
   - **What to Learn:**
     - **Switching:** The key differences between Circuit Switching and Packet Switching (connection setup, resource allocation, cost, example use cases).
@@ -49,6 +53,8 @@
 
 - **Topic 3: Flow Control (Stop-and-Wait ARQ) (4 hours)**
 
+  - **[Go to Answer](./stop_and_wait_arq.md)**
+
   - **Why:** This is the second most common long question. It's your backup if the routing question is difficult. It's also a frequent short question.
   - **What to Learn:**
     1. The basic mechanism of Stop-and-Wait (send one frame, wait for ACK).
@@ -60,8 +66,8 @@
 - **Topic 4: More High-Yield Short Questions (4 hours)**
   - **Why:** These topics appear frequently and are quick to learn.
   - **What to Learn:**
-    - **IPv4 vs. IPv6:** Create a comparison table covering Address Size, Header Format, Security (IPSec), and Configuration (Manual vs. Auto).
-    - **Traffic Shaping:** Understand the basic logic and draw the diagrams for Leaky Bucket (fixed output rate) and Token Bucket (allows bursts).
+    - **IPv4 vs. IPv6:** Create a comparison table covering Address Size, Header Format, Security (IPSec), and Configuration (Manual vs. Auto). **[Go to Answer](./ipv4_vs_ipv6.md)**
+    - **Traffic Shaping:** Understand the basic logic and draw the diagrams for Leaky Bucket (fixed output rate) and Token Bucket (allows bursts). **[Go to Answer](./traffic_shaping.md)**
   - **Action:** Memorize the IPv4 vs. IPv6 table. Practice drawing the bucket diagrams and writing a one-sentence explanation for each.
   - **Past Questions (IPv4/v6):** 2078, 2080, 2081, Model.
   - **Past Questions (Traffic Shaping):** 2080, 2080_new, 2081.
@@ -71,8 +77,8 @@
 - **Topic 5: Final Review & Key Definitions**
   - **Why:** Solidify your knowledge and pick up easy definition marks.
   - **What to Learn:**
-    - **TCP vs. UDP:** Key differences (connection-oriented vs. connectionless, reliability, header size).
-    - **MAC vs. LLC:** The two sublayers of the Data Link Layer and their primary function.
+    - **TCP vs. UDP:** Key differences (connection-oriented vs. connectionless, reliability, header size). **[Go to Answer](./tcp_vs_udp.md)**
+    - **MAC vs. LLC:** The two sublayers of the Data Link Layer and their primary function. **[Go to Answer](./mac_vs_llc.md)**
   - **Action:** Quickly review all the topics from Day 1. Write down the key differences for TCP/UDP and MAC/LLC on a cheat sheet.
   - **Past Questions (TCP/UDP):** 2080, 2080_new.
   - **Past Questions (MAC/LLC):** 2076, 2078, 2080, 2080_new, 2081, Model.
@@ -83,12 +89,12 @@
 
 1. **Section A (Long Questions):**
 
-    - **Priority 1:** Find the **Routing Algorithm** question. Solve it. This is your main target.
-    - **Priority 2 (Backup):** If routing isn't there or is confusing, solve the **Flow Control (ARQ)** question.
+   - **Priority 1:** Find the **Routing Algorithm** question. Solve it. This is your main target.
+   - **Priority 2 (Backup):** If routing isn't there or is confusing, solve the **Flow Control (ARQ)** question.
 
 2. **Section B (Short Questions):**
-    - **Priority 1:** Find and solve the **Subnetting** question first. It's guaranteed marks.
-    - **Priority 2:** Answer **Switching**, **Topologies**, and **IPv4 vs. IPv6**.
-    - **Priority 3:** Answer **Traffic Shaping**, **TCP vs. UDP**, and **MAC/LLC**.
+   - **Priority 1:** Find and solve the **Subnetting** question first. It's guaranteed marks.
+   - **Priority 2:** Answer **Switching**, **Topologies**, and **IPv4 vs. IPv6**.
+   - **Priority 3:** Answer **Traffic Shaping**, **TCP vs. UDP**, and **MAC/LLC**.
 
 By following this plan, you are targeting a very safe **35-40 marks**. Good luck!
