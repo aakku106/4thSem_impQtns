@@ -41,6 +41,7 @@ The most important part of Stop-and-Wait ARQ is how it handles errors. There are
 If a data frame is lost in transit, the receiver never gets it and therefore never sends an ACK.
 
 **Process:**
+
 1.  **Sender** sends Frame 0 and starts its timer.
 2.  The frame is lost. The **Receiver** does nothing because it received nothing.
 3.  The **Sender's** timer expires.
@@ -48,6 +49,7 @@ If a data frame is lost in transit, the receiver never gets it and therefore nev
 5.  The Receiver gets the re-transmitted Frame 0 and sends ACK 1. The process continues.
 
 **Diagram:**
+
 ```mermaid
 sequenceDiagram
     participant Sender
@@ -72,6 +74,7 @@ sequenceDiagram
 If the data frame is successfully received, but the ACK sent back by the receiver is lost.
 
 **Process:**
+
 1.  **Sender** sends Frame 0 and starts its timer.
 2.  **Receiver** correctly receives Frame 0 and sends ACK 1.
 3.  The ACK is lost in transit.
@@ -81,6 +84,7 @@ If the data frame is successfully received, but the ACK sent back by the receive
 7.  The Sender receives ACK 1 and finally sends Frame 1.
 
 **Diagram:**
+
 ```mermaid
 sequenceDiagram
     participant Sender
