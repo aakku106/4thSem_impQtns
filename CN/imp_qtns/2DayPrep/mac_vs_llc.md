@@ -40,8 +40,8 @@ graph TD
 ### Key Responsibilities:
 
 1.  **Access Control:** This is its most important job. It implements the method for accessing the physical medium.
-    *   **For Ethernet (wired):** It uses **CSMA/CD** (Carrier Sense Multiple Access with Collision Detection). Devices listen to see if the line is free before sending. If two send at once (a collision), they both back off and wait a random amount of time before trying again.
-    *   **For Wi-Fi (wireless):** It uses **CSMA/CA** (Carrier Sense Multiple Access with Collision Avoidance). Devices try to "reserve" a timeslot to send data to avoid collisions, since detecting them in the air is difficult.
+    - **For Ethernet (wired):** It uses **CSMA/CD** (Carrier Sense Multiple Access with Collision Detection). Devices listen to see if the line is free before sending. If two send at once (a collision), they both back off and wait a random amount of time before trying again.
+    - **For Wi-Fi (wireless):** It uses **CSMA/CA** (Carrier Sense Multiple Access with Collision Avoidance). Devices try to "reserve" a timeslot to send data to avoid collisions, since detecting them in the air is difficult.
 2.  **Addressing:** It defines the physical or hardware address, known as the **MAC Address**. This address is a unique 48-bit serial number burned into every network interface card (NIC). The MAC address is used to deliver frames to a specific device on a local network segment.
 3.  **Frame Delimiting:** The MAC layer adds a header and a trailer to the data packet to create a "frame." The header contains the source and destination MAC addresses. The trailer contains a Frame Check Sequence (FCS) for error detection.
 
@@ -49,10 +49,10 @@ graph TD
 
 ## Summary Comparison
 
-| Feature | Logical Link Control (LLC) | Media Access Control (MAC) |
-| :--- | :--- | :--- |
-| **Position** | Upper sublayer of Layer 2 | Lower sublayer of Layer 2 |
-| **Primary Role** | Interface with Layer 3, multiplexing protocols | Control access to the physical medium |
-| **Addressing** | Deals with logical service access points (LSAPs) to identify protocols. | Deals with physical MAC addresses. |
-| **Main Function** | Identifies the Network Layer protocol (e.g., IP). | Manages CSMA/CD or CSMA/CA, adds MAC addresses to frames. |
-| **Interacts With** | Network Layer (above) and MAC sublayer (below). | LLC sublayer (above) and Physical Layer (below). |
+| Feature            | Logical Link Control (LLC)                                              | Media Access Control (MAC)                                |
+| :----------------- | :---------------------------------------------------------------------- | :-------------------------------------------------------- |
+| **Position**       | Upper sublayer of Layer 2                                               | Lower sublayer of Layer 2                                 |
+| **Primary Role**   | Interface with Layer 3, multiplexing protocols                          | Control access to the physical medium                     |
+| **Addressing**     | Deals with logical service access points (LSAPs) to identify protocols. | Deals with physical MAC addresses.                        |
+| **Main Function**  | Identifies the Network Layer protocol (e.g., IP).                       | Manages CSMA/CD or CSMA/CA, adds MAC addresses to frames. |
+| **Interacts With** | Network Layer (above) and MAC sublayer (below).                         | LLC sublayer (above) and Physical Layer (below).          |
