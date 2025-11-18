@@ -29,6 +29,7 @@ Your goal today is to become a machine at solving CPU and Page Replacement probl
 - **Morning (6 hours): CPU Scheduling Mastery**
 
   - **Topics:** FCFS, SJF (Non-Preemptive), SRTN (Preemptive SJF), and Round Robin (RR).
+  - **Past Papers:** 2076, 2078, 2079, 2080, 2080_new, 2081, Model (Appears in every paper).
   - **What to learn:**
     1. How to draw a **Gantt Chart** for each algorithm. This is the most critical step.
     2. How to calculate **Turnaround Time (TAT)** = `Completion Time - Arrival Time`.
@@ -40,6 +41,7 @@ Your goal today is to become a machine at solving CPU and Page Replacement probl
 
 - **Afternoon (6 hours): Page Replacement Mastery**
   - **Topics:** FIFO, LRU (Least Recently Used), and OPR (Optimal).
+  - **Past Papers:** 2076, 2078, 2079, 2080, 2080_new, Model (Appears in almost every paper).
   - **What to learn:**
     1. How to set up the frame table.
     2. How to process a reference string step-by-step.
@@ -56,6 +58,7 @@ Today you'll master the third numerical and learn just enough theory to answer h
 - **Morning (5 hours): Disk Scheduling & Review**
 
   - **Topics:** FCFS, SSTF (Shortest Seek Time First), SCAN, and C-SCAN.
+  - **Past Papers:** 2076, 2079, 2080_new, 2081, Model.
   - **What to learn:**
     1. How to calculate the **total head movement** for each algorithm.
     2. How to draw the diagram showing the disk head's path.
@@ -68,14 +71,18 @@ Today you'll master the third numerical and learn just enough theory to answer h
   - You will not become an expert. The goal is to memorize key definitions and differences to grab 5-10 easy marks from short questions.
   - **Action Plan (1.5 hours per topic):**
     1. **Mutual Exclusion & Race Condition:**
-        - Learn the definition of a **Race Condition** and a **Critical Section**.
-        - Learn what a **Semaphore** is (a counter to control access) and its `wait()`/`signal()` operations.
+       - **Past Papers:** 2076, 2078, 2080, 2081, Model.
+       - Learn the definition of a **Race Condition** and a **Critical Section**.
+       - Learn what a **Semaphore** is (a counter to control access) and its `wait()`/`signal()` operations.
     2. **Deadlock Conditions:**
-        - Memorize the **four necessary conditions for deadlock**: Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait. Just be able to list and briefly explain them.
+       - **Past Papers:** 2076, 2078, 2079, 2080_new, 2081.
+       - Memorize the **four necessary conditions for deadlock**: Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait. Just be able to list and briefly explain them.
     3. **Process vs. Thread:**
-        - Create a small table with 3-4 key differences (Memory, Creation Time, Context Switching).
+       - **Past Papers:** 2076, 2080, 2081, Model.
+       - Create a small table with 3-4 key differences (Memory, Creation Time, Context Switching).
     4. **Paging vs. Segmentation:**
-        - Create another table with 3-4 key differences (Division of memory, Size, User view).
+       - **Past Papers:** 2080, 2080_new, 2081, Model.
+       - Create another table with 3-4 key differences (Division of memory, Size, User view).
 
 ---
 
@@ -83,12 +90,12 @@ Today you'll master the third numerical and learn just enough theory to answer h
 
 1. **Section A (Long Questions):**
 
-    - **Instantly find and solve the CPU Scheduling question.** (10 marks)
-    - **Instantly find and solve the Page Replacement question.** (10 marks)
-    - If one of them is missing, solve the **Disk Scheduling** question.
+   - **Instantly find and solve the CPU Scheduling question.** (10 marks)
+   - **Instantly find and solve the Page Replacement question.** (10 marks)
+   - If one of them is missing, solve the **Disk Scheduling** question.
 
 2. **Section B (Short Questions):**
-    - Scan for questions on the theory topics you memorized: **Deadlock Conditions, Process vs. Thread, Paging vs. Segmentation, Mutual Exclusion**.
-    - Answer the ones you know. Don't waste time on anything else.
+   - Scan for questions on the theory topics you memorized: **Deadlock Conditions, Process vs. Thread, Paging vs. Segmentation, Mutual Exclusion**.
+   - Answer the ones you know. Don't waste time on anything else.
 
 By following this plan, you are aiming for **20 marks from two long questions** and **5-15 marks from short questions**. This puts you in the 25-35 mark range, giving you a strong chance to pass. Good luck!
