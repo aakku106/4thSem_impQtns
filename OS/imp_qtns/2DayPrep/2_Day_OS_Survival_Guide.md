@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 Your Must-Master Topics (The 25-30 Mark Core)
+## Your Must-Master Topics (The 25-30 Mark Core)
 
 Do not study anything else until you have mastered these three. They are your ticket to passing.
 
@@ -86,7 +86,7 @@ Today you'll master the third numerical and learn just enough theory to answer h
 
 ---
 
-## 🎯 Exam Day Game Plan
+## Exam Day Game Plan
 
 1. **Section A (Long Questions):**
 
