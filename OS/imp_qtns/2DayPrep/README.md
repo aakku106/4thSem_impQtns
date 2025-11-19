@@ -30,6 +30,7 @@ Your goal today is to become a machine at solving CPU and Page Replacement probl
 
   - **Topics:** FCFS, SJF (Non-Preemptive), SRTN (Preemptive SJF), and Round Robin (RR).
   - **Past Papers:** 2076, 2078, 2079, 2080, 2080_new, 2081, Model (Appears in every paper).
+  - **[View Examples](./cpu_scheduling_examples.md)**
   - **What to learn:**
     1. How to draw a **Gantt Chart** for each algorithm. This is the most critical step.
     2. How to calculate **Turnaround Time (TAT)** = `Completion Time - Arrival Time`.
@@ -42,6 +43,7 @@ Your goal today is to become a machine at solving CPU and Page Replacement probl
 - **Afternoon (6 hours): Page Replacement Mastery**
   - **Topics:** FIFO, LRU (Least Recently Used), and OPR (Optimal).
   - **Past Papers:** 2076, 2078, 2079, 2080, 2080_new, Model (Appears in almost every paper).
+  - **[View Examples](./page_replacement_examples.md)**
   - **What to learn:**
     1. How to set up the frame table.
     2. How to process a reference string step-by-step.
@@ -59,6 +61,7 @@ Today you'll master the third numerical and learn just enough theory to answer h
 
   - **Topics:** FCFS, SSTF (Shortest Seek Time First), SCAN, and C-SCAN.
   - **Past Papers:** 2076, 2079, 2080_new, 2081, Model.
+  - **[View Examples](./disk_scheduling_examples.md)**
   - **What to learn:**
     1. How to calculate the **total head movement** for each algorithm.
     2. How to draw the diagram showing the disk head's path.
@@ -72,16 +75,20 @@ Today you'll master the third numerical and learn just enough theory to answer h
   - **Action Plan (1.5 hours per topic):**
     1. **Mutual Exclusion & Race Condition:**
        - **Past Papers:** 2076, 2078, 2080, 2081, Model.
+       - **[View Explanation](./mutual_exclusion_and_race_condition.md)**
        - Learn the definition of a **Race Condition** and a **Critical Section**.
        - Learn what a **Semaphore** is (a counter to control access) and its `wait()`/`signal()` operations.
     2. **Deadlock Conditions:**
        - **Past Papers:** 2076, 2078, 2079, 2080_new, 2081.
+       - **[View Explanation](./deadlock_conditions.md)**
        - Memorize the **four necessary conditions for deadlock**: Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait. Just be able to list and briefly explain them.
     3. **Process vs. Thread:**
        - **Past Papers:** 2076, 2080, 2081, Model.
+       - **[View Explanation](./process_vs_thread.md)**
        - Create a small table with 3-4 key differences (Memory, Creation Time, Context Switching).
     4. **Paging vs. Segmentation:**
        - **Past Papers:** 2080, 2080_new, 2081, Model.
+       - **[View Explanation](./paging_vs_segmentation.md)**
        - Create another table with 3-4 key differences (Division of memory, Size, User view).
 
 ---
