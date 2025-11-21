@@ -25,6 +25,7 @@ All three analyses agree: a few topics are **guaranteed** to appear and can secu
 - **Why**: This is the most repeated **long question** (appears in 5/7 papers) and a guaranteed short question (6/7 papers). Mastering it gives you a direct shot at 15 marks.
 - **Past Papers (Long)**: 2076, 2079, 2080, 2080_new, Model.
 - **Past Papers (Short - FD)**: 2076, 2078, 2079, 2080_new, 2081, Model.
+- **[View Explanation](./normalization_and_fd.md)**
 - **What to Study**:
   1. **Anomalies (1 Hour)**: Understand _why_ we need normalization. Learn Insertion, Deletion, and Update anomalies with a simple example.
   2. **Functional Dependency (FD) (2 Hours)**: This is the key to normalization.
@@ -43,6 +44,7 @@ All three analyses agree: a few topics are **guaranteed** to appear and can secu
 - **What to Study**:
   1. **Transaction Properties (ACID) (2 Hours)**:
      - **Past Papers**: 2076, 2079, 2080, 2081, Model.
+     - **[View Explanation](./acid_properties.md)**
      - **A**tomicity: All or nothing.
      - **C**onsistency: Database stays valid.
      - **I**solation: Transactions don't interfere.
@@ -50,6 +52,7 @@ All three analyses agree: a few topics are **guaranteed** to appear and can secu
      - _Practice writing a one-sentence definition for each._
   2. **Three-Schema Architecture (2 Hours)**:
      - **Past Papers**: 2078, 2079, 2080_new, 2081, Model.
+     - **[View Explanation](./three_schema_architecture.md)**
      - Draw the diagram: **External Schema -> Conceptual Schema -> Internal Schema**.
      - Define each level's purpose.
      - Define **Logical and Physical Data Independence**.
@@ -67,6 +70,7 @@ All three analyses agree: a few topics are **guaranteed** to appear and can secu
 
 - **Why**: This is the second guaranteed **long question**, appearing in 5/7 papers. Focus on the most common query types.
 - **Past Papers**: 2076, 2078, 2080, 2080_new, 2081, Model.
+- **[View Explanation](./sql_queries.md)**
 - **What to Study**:
   1. **Basic `SELECT` (2 Hours)**:
      - `SELECT ... FROM ... WHERE ...`
