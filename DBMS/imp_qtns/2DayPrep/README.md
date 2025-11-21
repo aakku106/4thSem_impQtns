@@ -4,7 +4,7 @@
 
 ---
 
-## 🎯 The Core Strategy: "Guaranteed Marks"
+## The Core Strategy: "Guaranteed Marks"
 
 All three analyses agree: a few topics are **guaranteed** to appear and can secure your pass marks alone. We will focus exclusively on these.
 
@@ -16,7 +16,7 @@ All three analyses agree: a few topics are **guaranteed** to appear and can secu
 
 ---
 
-## 🗓️ The 24-Hour Breakdown
+## ️ The 24-Hour Breakdown
 
 ### Day 1: The Foundation (12 Hours)
 
@@ -91,7 +91,7 @@ All three analyses agree: a few topics are **guaranteed** to appear and can secu
 
 ---
 
-## 💡 Final Advice
+## Final Advice
 
 - **Don't Panic and Don't Deviate**: Stick to this plan. It's tempting to try and learn more, but you don't have the time. Master these few topics.
 - **Practice over Theory**: For Normalization and SQL, practice is everything. Find examples online or in your textbook and solve them.
