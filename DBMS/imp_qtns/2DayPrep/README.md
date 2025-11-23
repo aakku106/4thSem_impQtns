@@ -71,6 +71,7 @@ All three analyses agree: a few topics are **guaranteed** to appear and can secu
 - **Why**: This is the second guaranteed **long question**, appearing in 5/7 papers. Focus on the most common query types.
 - **Past Papers**: 2076, 2078, 2080, 2080_new, 2081, Model.
 - **[View Explanation](./sql_queries.md)**
+- **[View Past Paper Solutions](./sql_past_paper_solutions.md)**
 - **What to Study**:
   1. **Basic `SELECT` (2 Hours)**:
      - `SELECT ... FROM ... WHERE ...`
