@@ -1,6 +1,6 @@
 # Artificial Intelligence - Strategic Study Plan (Target: 35+ Marks)
 
-## 📊 Overall Strategy
+## Overall Strategy
 
 - **Full Marks**: 60 (2 Long × 10 + 8 Short × 5)
 - **Pass Marks**: 24
@@ -9,7 +9,7 @@
 
 ---
 
-## 🎯 Question Pattern Analysis (7 Sets Analyzed)
+## Question Pattern Analysis (7 Sets Analyzed)
 
 ### Section A - Long Questions (Attempt 2 out of 3) - 20 Marks Total
 
@@ -58,9 +58,9 @@
 
 ---
 
-## 📚 Detailed Topic Breakdown & Study Roadmap
+## Detailed Topic Breakdown & Study Roadmap
 
-### 🔥 PRIORITY 1: Must-Study Topics (Target: 25-30 Marks)
+### PRIORITY 1: Must-Study Topics (Target: 25-30 Marks)
 
 #### 1. Resolution in FOPL (Unit 4) - **6/7 papers, Long Question**
 
@@ -449,11 +449,13 @@ Best move: Go left
 2. **Crossover:** Combine two parents to create offspring
 
    - **One-point crossover:**
+
      ```
      Parent1: 01100010   Parent2: 10101100
      Cut at position 3:
      Child1: 011|01100   Child2: 101|00010
      ```
+
    - **Two-point crossover:** Cut at two positions, swap middle
 
 3. **Mutation:** Randomly flip bits
@@ -783,7 +785,7 @@ Apply R2: Ram studies (add to facts)
 
 ---
 
-## 📐 Key Formulas & Notations
+## Key Formulas & Notations
 
 ### Search Algorithms
 
@@ -845,7 +847,7 @@ De Morgan's Laws:
 
 ---
 
-## ✅ Final Checklist (Before Exam)
+## Final Checklist (Before Exam)
 
 ### Long Questions (Must Know)
 
@@ -883,7 +885,7 @@ De Morgan's Laws:
 
 ---
 
-## 🎯 Final Score Projection
+## Final Score Projection
 
 **Conservative Estimate:**
 
@@ -892,14 +894,14 @@ De Morgan's Laws:
 - Short Q1-4 (PEAS, NLP, Semantic, Min-Max): 4×4 = 16/20
 - Short Q5-8 (Expert, GA, Turing, Search): 4×3.5 = 14/20
 
-**Total: 8+8+16+14 = 46 marks** ✅ (Well above 35 target)
+**Total: 8+8+16+14 = 46 marks** (Well above 35 target)
 
 **Optimistic Estimate:**
 
 - Long: 9+9 = 18/20
 - Short: 8×4.5 = 36/40
 
-**Total: 18+36 = 54 marks** ✅ (Excellent score)
+**Total: 18+36 = 54 marks** (Excellent score)
 
 ---
 
@@ -928,4 +930,4 @@ De Morgan's Laws:
 
 ---
 
-**Good luck! Focus on the Priority 1 & 2 topics, and you'll comfortably cross 35 marks! 🚀**
+**Good luck! Focus on the Priority 1 & 2 topics, and you'll comfortably cross 35 marks!**
