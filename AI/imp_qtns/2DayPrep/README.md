@@ -10,11 +10,11 @@
 
 Do not study anything else until you have mastered these. They are your ticket to passing.
 
-| Rank | Topic (Focus on Procedural Problems) | Frequency (Avg.) | Why it's essential                                        |
-| :--- | :----------------------------------- | :--------------- | :-------------------------------------------------------- |
-| 1    | **Informed Search Algorithms**       | **6/7**          | **Guaranteed 10 marks.** A numerical trace that is easy to master. |
+| Rank | Topic (Focus on Procedural Problems) | Frequency (Avg.) | Why it's essential                                                                 |
+| :--- | :----------------------------------- | :--------------- | :--------------------------------------------------------------------------------- |
+| 1    | **Informed Search Algorithms**       | **6/7**          | **Guaranteed 10 marks.** A numerical trace that is easy to master.                 |
 | 2    | **FOPL → CNF → Resolution**          | **6/7**          | **Guaranteed 10 marks.** A step-by-step proof. Full marks if you know the process. |
-| 3    | **High-Yield Short Questions**       | **5/7**          | **Very likely 10-15 marks.** Quick memorization for easy points. |
+| 3    | **High-Yield Short Questions**       | **5/7**          | **Very likely 10-15 marks.** Quick memorization for easy points.                   |
 
 ---
 
@@ -27,6 +27,7 @@ This schedule is intense but focuses your effort for maximum return.
 Your goal today is to become a machine at solving the two main long questions.
 
 - **Morning (6 hours): Informed Search Mastery**
+
   - **Topics:** A\* Search and Greedy Best-First Search.
   - **Past Papers:** 2076, 2078, 2079, 2080, 2080_new, 2081, Model.
   - **[View Examples](./informed_search_examples.md)**
@@ -53,6 +54,7 @@ Your goal today is to become a machine at solving the two main long questions.
 ### **Day 2: High-Yield Short Questions & Review (12 Hours)**
 
 - **Morning (6 hours): Short Question Crash Course**
+
   - You will not become an expert. The goal is to memorize key definitions and steps to grab 10-15 easy marks.
   - **[View Cheatsheet](./short_qtn_cheatsheet.md)**
   - **Action Plan (2 hours per topic):**
@@ -72,11 +74,12 @@ Your goal today is to become a machine at solving the two main long questions.
 ## Exam Day Game Plan
 
 1.  **Section A (Long Questions):**
-    -   **Instantly find and solve the Informed Search (A\*/Greedy) question.** (10 marks)
-    -   **Instantly find and solve the FOPL Resolution question.** (10 marks)
+
+    - **Instantly find and solve the Informed Search (A\*/Greedy) question.** (10 marks)
+    - **Instantly find and solve the FOPL Resolution question.** (10 marks)
 
 2.  **Section B (Short Questions):**
-    -   Scan for questions on **PEAS, NLP steps, and Min-Max**.
-    -   Answer the ones you know. Don't waste time on anything else.
+    - Scan for questions on **PEAS, NLP steps, and Min-Max**.
+    - Answer the ones you know. Don't waste time on anything else.
 
 By following this plan, you are aiming for **20 marks from two long questions** and **10-15 marks from short questions**. This puts you in the 30-35 mark range, giving you a strong chance to pass. Good luck!
