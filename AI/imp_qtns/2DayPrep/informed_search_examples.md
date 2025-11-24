@@ -61,13 +61,13 @@ Greedy search is simpler and "short-sighted." It always expands the node with th
 
 **Step-by-Step Trace:**
 
-1.  **Initialize:** OPEN = {S}
-2.  **Expand S:** Neighbors are A (h=5) and B (h=2).
-3.  **Choose B:** Pick B because `h(B) = 2` is lower than `h(A) = 5`. OPEN = {A, B} -> {A, C}.
-4.  **Expand B:** Neighbor is C (h=2).
-5.  **Choose C:** Pick C. OPEN = {A, C} -> {A, G}.
-6.  **Expand C:** Neighbor is G (h=0).
-7.  **Choose G:** Goal found.
+1. **Initialize:** OPEN = {S}
+2. **Expand S:** Neighbors are A (h=5) and B (h=2).
+3. **Choose B:** Pick B because `h(B) = 2` is lower than `h(A) = 5`. OPEN = {A, B} -> {A, C}.
+4. **Expand B:** Neighbor is C (h=2).
+5. **Choose C:** Pick C. OPEN = {A, C} -> {A, G}.
+6. **Expand C:** Neighbor is G (h=0).
+7. **Choose G:** Goal found.
 
 **Result (Greedy):**
 

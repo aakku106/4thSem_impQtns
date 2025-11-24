@@ -28,38 +28,38 @@ This is a mechanical process. Follow these steps exactly to get full marks.
 
 First, translate the English sentences into First-Order Predicate Logic. **Crucially, you must negate the conclusion.**
 
-1.  `∀x (Student(x) → Smart(x))`
-2.  `∀x (Smart(x) → Studies(x))`
-3.  `Student(Ram)`
-4.  `¬Studies(Ram)` _(Negated Conclusion)_
+1. `∀x (Student(x) → Smart(x))`
+2. `∀x (Smart(x) → Studies(x))`
+3. `Student(Ram)`
+4. `¬Studies(Ram)` _(Negated Conclusion)_
 
 ### Step 2: Eliminate Implications (→)
 
 Convert every `A → B` into `¬A ∨ B`.
 
-1.  `∀x (¬Student(x) ∨ Smart(x))`
-2.  `∀x (¬Smart(x) ∨ Studies(x))`
-3.  `Student(Ram)`
-4.  `¬Studies(Ram)`
+1. `∀x (¬Student(x) ∨ Smart(x))`
+2. `∀x (¬Smart(x) ∨ Studies(x))`
+3. `Student(Ram)`
+4. `¬Studies(Ram)`
 
 ### Step 3: Standardize Variables
 
 Ensure each quantifier (`∀`) has a unique variable name to avoid clashes.
 
-1.  `∀x (¬Student(x) ∨ Smart(x))`
-2.  `∀y (¬Smart(y) ∨ Studies(y))` _(Renamed x to y)_
-3.  `Student(Ram)`
-4.  `¬Studies(Ram)`
+1. `∀x (¬Student(x) ∨ Smart(x))`
+2. `∀y (¬Smart(y) ∨ Studies(y))` _(Renamed x to y)_
+3. `Student(Ram)`
+4. `¬Studies(Ram)`
 
 ### Step 4: Skolemize and Drop Universal Quantifiers (∀)
 
 - **Skolemization:** Replace existential quantifiers (`∃`) with a constant or function. (There are none in this common exam problem, so you can often skip this).
 - **Drop ∀:** Simply remove all the `∀x` and `∀y` symbols.
 
-1.  `¬Student(x) ∨ Smart(x)`
-2.  `¬Smart(y) ∨ Studies(y)`
-3.  `Student(Ram)`
-4.  `¬Studies(Ram)`
+1. `¬Student(x) ∨ Smart(x)`
+2. `¬Smart(y) ∨ Studies(y)`
+3. `Student(Ram)`
+4. `¬Studies(Ram)`
 
 ### Step 5: List Clauses in CNF
 
