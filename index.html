@@ -6,6 +6,8 @@
     <title>4th Sem BSc.CSIT Exam Prep | Study Materials & Resources</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Marked.js for proper markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -238,31 +240,31 @@
                 <p class="section-subtitle">Last-minute preparation? We've got you covered!</p>
             </div>
             <div class="emergency-grid">
-                <div class="emergency-card" onclick="viewContent('AI/imp_qtns/2DayPrep/README.md', 'AI - 2 Day Plan')">
+                <a href="viewer.html?file=AI/imp_qtns/2DayPrep/README.md&title=AI - 2 Day Plan" target="_blank" class="emergency-card">
                     <h3>AI - 2 Day Plan</h3>
                     <p>FOPL Resolution, Informed Search, Short Question Cheatsheet</p>
                     <span class="btn btn-small">View Plan</span>
-                </div>
-                <div class="emergency-card" onclick="viewContent('CN/imp_qtns/2DayPrep/README.md', 'CN - 2 Day Plan')">
+                </a>
+                <a href="viewer.html?file=CN/imp_qtns/2DayPrep/README.md&title=CN - 2 Day Plan" target="_blank" class="emergency-card">
                     <h3>CN - 2 Day Plan</h3>
                     <p>IPv4/IPv6, TCP/UDP, Subnetting, Traffic Shaping</p>
                     <span class="btn btn-small">View Plan</span>
-                </div>
-                <div class="emergency-card" onclick="viewContent('DBMS/imp_qtns/2DayPrep/README.md', 'DBMS - 2 Day Plan')">
+                </a>
+                <a href="viewer.html?file=DBMS/imp_qtns/2DayPrep/README.md&title=DBMS - 2 Day Plan" target="_blank" class="emergency-card">
                     <h3>DBMS - 2 Day Plan</h3>
                     <p>SQL Queries, Normalization, ACID Properties</p>
                     <span class="btn btn-small">View Plan</span>
-                </div>
-                <div class="emergency-card" onclick="viewContent('OS/imp_qtns/2DayPrep/README.md', 'OS - 2 Day Plan')">
+                </a>
+                <a href="viewer.html?file=OS/imp_qtns/2DayPrep/README.md&title=OS - 2 Day Plan" target="_blank" class="emergency-card">
                     <h3>OS - 2 Day Plan</h3>
                     <p>CPU Scheduling, Deadlock, Page Replacement</p>
                     <span class="btn btn-small">View Plan</span>
-                </div>
-                <div class="emergency-card" onclick="viewContent('TOC/imp_qtns/2DayPrep/2_Day_TOC_Survival_Guide.md', 'TOC - 2 Day Plan')">
+                </a>
+                <a href="viewer.html?file=TOC/imp_qtns/2DayPrep/2_Day_TOC_Survival_Guide.md&title=TOC - 2 Day Plan" target="_blank" class="emergency-card">
                     <h3>TOC - 2 Day Plan</h3>
                     <p>Pumping Lemma, CFG Basics, Chomsky Hierarchy</p>
                     <span class="btn btn-small">View Plan</span>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -342,17 +344,6 @@
         </div>
     </footer>
 
-    <!-- Content Modal -->
-    <div id="contentModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle"></h2>
-                <button class="close" onclick="contentViewer.closeModal()" aria-label="Close">&times;</button>
-            </div>
-            <div id="modalBody" class="modal-body"></div>
-        </div>
-    </div>
-
     <!-- Subject Modal -->
     <div id="subjectModal" class="modal">
         <div class="modal-content">
@@ -361,7 +352,6 @@
         </div>
     </div>
 
-    <script src="markdown-parser.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

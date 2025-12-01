@@ -59,10 +59,11 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
-// Content Viewer Function
+// Content Viewer Function - Opens in new tab
 // ============================================
 function viewContent(path, title) {
-    contentViewer.openInModal(path, title);
+    const url = `viewer.html?file=${encodeURIComponent(path)}&title=${encodeURIComponent(title)}`;
+    window.open(url, '_blank');
 }
 
 // ============================================
@@ -88,9 +89,6 @@ window.addEventListener('click', (event) => {
     if (event.target === subjectModal) {
         closeSubjectModal();
     }
-    if (event.target === document.getElementById('contentModal')) {
-        contentViewer.closeModal();
-    }
 });
 
 // Close modal with Escape key
@@ -98,9 +96,6 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         if (subjectModal.style.display === 'block') {
             closeSubjectModal();
-        }
-        if (document.getElementById('contentModal').style.display === 'block') {
-            contentViewer.closeModal();
         }
     }
 });

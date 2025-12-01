@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Document...</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .viewer-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: 100vh;
+      }
+
+      .viewer-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      [data-theme="dark"] .viewer-header {
+        background: rgba(28, 28, 30, 0.8);
+      }
+
+      .viewer-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 0;
+        letter-spacing: -0.01em;
+      }
+
+      .viewer-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .theme-toggle {
+        background: var(--bg-secondary);
+        border: none;
+        border-radius: var(--radius-md);
+        padding: 0.5rem 0.75rem;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-primary);
+      }
+
+      .theme-toggle:hover {
+        background: var(--bg-tertiary);
+      }
+
+      .theme-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      [data-theme="light"] .theme-icon.moon {
+        display: none;
+      }
+
+      [data-theme="dark"] .theme-icon.sun {
+        display: none;
+      }
+
+      .back-btn {
+        background: var(--accent-primary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.9375rem;
+        transition: all var(--transition-fast);
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .back-btn:hover {
+        background: var(--accent-hover);
+        transform: translateY(-1px);
+      }
+
+      .loading {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--text-secondary);
+        font-size: 1.125rem;
+      }
+
+      .error {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--danger);
+      }
+
+      .markdown-content {
+        line-height: 1.6;
+        color: var(--text-primary);
+        padding: 2rem 0;
+      }
+
+      .markdown-content h1,
+      .markdown-content h2,
+      .markdown-content h3,
+      .markdown-content h4,
+      .markdown-content h5,
+      .markdown-content h6 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+        line-height: 1.25;
+      }
+
+      .markdown-content h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
+      }
+      .markdown-content h2 {
+        font-size: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+      }
+      .markdown-content h3 {
+        font-size: 1.5rem;
+      }
+      .markdown-content h4 {
+        font-size: 1.25rem;
+      }
+      .markdown-content h5 {
+        font-size: 1.125rem;
+      }
+      .markdown-content h6 {
+        font-size: 1rem;
+      }
+
+      .markdown-content p {
+        margin-bottom: 1.25rem;
+        color: var(--text-secondary);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .markdown-content strong {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .markdown-content em {
+        font-style: italic;
+      }
+
+      .markdown-content code {
+        background: var(--bg-secondary);
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-family: "SF Mono", "Monaco", "Consolas", "Courier New", monospace;
+        font-size: 0.875em;
+        color: var(--accent-primary);
+        border: 1px solid var(--border-color);
+      }
+
+      .markdown-content pre {
+        background: var(--bg-secondary);
+        padding: 1.25rem;
+        border-radius: var(--radius-lg);
+        overflow-x: auto;
+        margin: 1.5rem 0;
+        border: 1px solid var(--border-color);
+      }
+
+      .markdown-content pre code {
+        background: none;
+        padding: 0;
+        color: var(--text-primary);
+        border: none;
+        font-size: 0.875rem;
+      }
+
+      .markdown-content ul,
+      .markdown-content ol {
+        margin-left: 2rem;
+        margin-bottom: 1.25rem;
+        color: var(--text-secondary);
+      }
+
+      .markdown-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+
+      .markdown-content li > p {
+        margin-bottom: 0.5rem;
+      }
+
+      .markdown-content a {
+        color: var(--accent-primary);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color var(--transition-fast);
+      }
+
+      .markdown-content a:hover {
+        border-bottom-color: var(--accent-primary);
+      }
+
+      .markdown-content blockquote {
+        border-left: 4px solid var(--accent-primary);
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+
+      .markdown-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        overflow: hidden;
+        border-radius: var(--radius-md);
+      }
+
+      .markdown-content table th,
+      .markdown-content table td {
+        border: 1px solid var(--border-color);
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      .markdown-content table th {
+        background: var(--bg-secondary);
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .markdown-content table tr:nth-child(even) {
+        background: var(--bg-secondary);
+      }
+
+      .markdown-content hr {
+        border: none;
+        border-top: 1px solid var(--border-color);
+        margin: 2rem 0;
+      }
+
+      .markdown-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--radius-lg);
+        margin: 1.5rem 0;
+      }
+
+      @media print {
+        .viewer-header {
+          position: static;
+        }
+        .viewer-actions {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="viewer-header">
+      <h1 class="viewer-title" id="documentTitle">Loading...</h1>
+      <div class="viewer-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg
+            class="theme-icon sun"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle
+              cx="10"
+              cy="10"
+              r="3"
+              stroke="currentColor"
+              stroke-width="1.5" />
+            <path
+              d="M10 2V4M10 16V18M18 10H16M4 10H2M15.5 15.5L14 14M6 6L4.5 4.5M15.5 4.5L14 6M6 14L4.5 15.5"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round" />
+          </svg>
+          <svg
+            class="theme-icon moon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18 11.5C17.1 13.5 15 15 12.5 15C9.5 15 7 12.5 7 9.5C7 7 8.5 4.9 10.5 4C6.5 4.5 3.5 7.9 3.5 12C3.5 16.1 6.9 19.5 11 19.5C14.9 19.5 18.1 16.7 18.5 13C18.3 12.1 18.2 11.8 18 11.5Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+      </div>
+    </div>
+
+    <div class="viewer-container">
+      <div id="content" class="loading">Loading document...</div>
+    </div>
+
+    <script>
+      // Theme management
+      const themeToggle = document.getElementById("themeToggle");
+      const html = document.documentElement;
+      const currentTheme = localStorage.getItem("theme") || "light";
+      html.setAttribute("data-theme", currentTheme);
+
+      themeToggle.addEventListener("click", () => {
+        const theme = html.getAttribute("data-theme");
+        const newTheme = theme === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+
+      // Configure marked.js for better rendering
+      marked.setOptions({
+        breaks: true,
+        gfm: true,
+        headerIds: true,
+        mangle: false,
+      });
+
+      // Get file path from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const filePath = urlParams.get("file");
+      const title = urlParams.get("title");
+
+      const contentDiv = document.getElementById("content");
+      const titleElement = document.getElementById("documentTitle");
+
+      if (title) {
+        titleElement.textContent = title;
+        document.title = title + " | 4th Sem Exam Prep";
+      }
+
+      if (!filePath) {
+        contentDiv.innerHTML =
+          '<div class="error"><h2>No File Specified</h2><p>Please provide a file path in the URL.</p></div>';
+      } else {
+        // Fetch and render markdown
+        fetch(filePath)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to load document");
+            }
+            return response.text();
+          })
+          .then((markdown) => {
+            const html = marked.parse(markdown);
+            contentDiv.innerHTML = `<div class="markdown-content">${html}</div>`;
+
+            // Update title if not provided
+            if (!title) {
+              const firstHeading = contentDiv.querySelector("h1");
+              if (firstHeading) {
+                const extractedTitle = firstHeading.textContent;
+                titleElement.textContent = extractedTitle;
+                document.title = extractedTitle + " | 4th Sem Exam Prep";
+              }
+            }
+          })
+          .catch((error) => {
+            console.error("Error loading document:", error);
+            contentDiv.innerHTML = `
+                        <div class="error">
+                            <h2>Error Loading Document</h2>
+                            <p>Unable to load the requested document. Please try again.</p>
+                            <p style="font-size: 0.875rem; margin-top: 1rem;">File: ${filePath}</p>
+                        </div>
+                    `;
+          });
+      }
+    </script>
+  </body>
+</html>

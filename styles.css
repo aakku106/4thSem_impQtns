@@ -543,6 +543,8 @@ body {
     box-shadow: var(--shadow-lg);
     transition: all var(--transition-base);
     cursor: pointer;
+    text-decoration: none;
+    display: block;
 }
 
 .emergency-card:hover {
@@ -555,6 +557,7 @@ body {
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.01em;
+    color: white;
 }
 
 .emergency-card p {
@@ -562,6 +565,7 @@ body {
     margin-bottom: var(--spacing-md);
     font-size: 0.875rem;
     line-height: 1.5;
+    color: white;
 }
 
 .emergency-card .btn {
