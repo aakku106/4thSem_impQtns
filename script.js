@@ -17,6 +17,50 @@ themeToggle.addEventListener("click", () => {
 });
 
 // ============================================
+// Back to Top Button
+// ============================================
+const backToTopButton = document.getElementById("backToTop");
+
+// Show/hide back to top button on scroll
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    backToTopButton.classList.add("visible");
+  } else {
+    backToTopButton.classList.remove("visible");
+  }
+});
+
+// Scroll to top when clicked
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// ============================================
+// Keyboard Shortcuts
+// ============================================
+document.addEventListener("keydown", (e) => {
+  // Ctrl+K or Cmd+K to open search
+  if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+    e.preventDefault();
+    if (!searchOverlay.classList.contains("active")) {
+      searchToggle.click();
+    }
+  }
+
+  // Escape to close search or modals
+  if (e.key === "Escape") {
+    if (searchOverlay.classList.contains("active")) {
+      searchClose.click();
+    } else if (subjectModal.style.display === "block") {
+      closeSubjectModal();
+    }
+  }
+});
+
+// ============================================
 // Smooth Scrolling & Active Nav Links
 // ============================================
 const navLinks = document.querySelectorAll(".nav-link");
