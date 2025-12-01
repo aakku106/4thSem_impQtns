@@ -343,13 +343,14 @@ function getSubjectData(subject) {
 
 function generateModalContent(subject, data) {
   return `
+        <div class="subject-modal-wrapper">
         <div class="modal-header-content">
             <h2>${data.name}</h2>
             <span class="subject-code">${data.code}</span>
         </div>
-        <p class="modal-description">${data.description}</p>
-        
-        <div class="modal-section">
+        <p class="modal-description">${
+          data.description
+        }</p>        <div class="modal-section">
             <h3>Syllabus</h3>
             <button class="resource-link" onclick="viewContent('${
               data.syllabus
@@ -429,8 +430,12 @@ function generateModalContent(subject, data) {
         `
             : ""
         }
+        </div>
         
         <style>
+            #subjectModalBody {
+                text-align: left;
+            }
             .modal-header-content {
                 display: flex;
                 justify-content: space-between;
@@ -509,6 +514,9 @@ function generateModalContent(subject, data) {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
+            }
+            .subject-modal-wrapper {
+                text-align: left;
             }
         </style>
     `;
