@@ -804,9 +804,10 @@ body {
 }
 
 .modal-body {
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 2.5rem 3rem;
   overflow-y: auto;
   flex: 1;
+  line-height: 1.6;
 }
 
 .close {

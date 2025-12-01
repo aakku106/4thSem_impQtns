@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <style>
       body {
         padding: 0;
@@ -205,6 +206,20 @@
         font-size: 0.875rem;
       }
 
+      /* Mermaid Diagram Styles */
+      .mermaid {
+        background: var(--bg-secondary);
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        margin: 1.5rem 0;
+        border: 1px solid var(--border-color);
+        text-align: center;
+      }
+
+      [data-theme="dark"] .mermaid {
+        filter: invert(0.9) hue-rotate(180deg);
+      }
+
       .markdown-content ul,
       .markdown-content ol {
         margin-left: 2rem;
@@ -359,6 +374,16 @@
         mangle: false,
       });
 
+      // Initialize Mermaid
+      mermaid.initialize({
+        startOnLoad: false,
+        theme:
+          document.documentElement.getAttribute("data-theme") === "dark"
+            ? "dark"
+            : "default",
+        securityLevel: "loose",
+      });
+
       // Get file path from URL
       const urlParams = new URLSearchParams(window.location.search);
       const filePath = urlParams.get("file");
@@ -387,6 +412,31 @@
           .then((markdown) => {
             const html = marked.parse(markdown);
             contentDiv.innerHTML = `<div class="markdown-content">${html}</div>`;
+
+            // Convert mermaid code blocks to mermaid divs
+            const codeBlocks = contentDiv.querySelectorAll(
+              "pre code.language-mermaid"
+            );
+            codeBlocks.forEach((block, index) => {
+              const mermaidCode = block.textContent;
+              const mermaidDiv = document.createElement("div");
+              mermaidDiv.className = "mermaid";
+              mermaidDiv.setAttribute("data-processed", "false");
+              mermaidDiv.textContent = mermaidCode;
+              block.parentElement.replaceWith(mermaidDiv);
+            });
+
+            // Render all mermaid diagrams
+            mermaid
+              .run({
+                querySelector: '.mermaid[data-processed="false"]',
+              })
+              .then(() => {
+                // Mark as processed
+                contentDiv.querySelectorAll(".mermaid").forEach((el) => {
+                  el.setAttribute("data-processed", "true");
+                });
+              });
 
             // Update title if not provided
             if (!title) {

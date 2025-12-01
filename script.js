@@ -452,26 +452,31 @@ function generateModalContent(subject, data) {
             }
             .modal-description {
                 color: var(--text-secondary);
-                margin-bottom: 2rem;
-                line-height: 1.5;
+                margin: 1rem 0 2rem 0;
+                line-height: 1.6;
+                font-size: 0.9375rem;
             }
             .modal-section {
-                margin-bottom: 2rem;
+                margin-bottom: 2.5rem;
+            }
+            .modal-section:last-child {
+                margin-bottom: 0;
             }
             .modal-section h3 {
                 color: var(--text-primary);
-                margin-bottom: 1rem;
+                margin: 0 0 1rem 0;
                 font-size: 1.125rem;
                 font-weight: 600;
+                letter-spacing: -0.01em;
             }
             .resource-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 0.75rem;
+                gap: 0.875rem;
             }
             .resource-link {
                 display: block;
-                padding: 0.75rem 1rem;
+                padding: 0.875rem 1.125rem;
                 background: var(--bg-secondary);
                 border: 1px solid var(--border-color);
                 border-radius: var(--radius-md);
@@ -481,6 +486,7 @@ function generateModalContent(subject, data) {
                 cursor: pointer;
                 font-size: 0.9375rem;
                 text-align: left;
+                font-weight: 500;
             }
             .resource-link:hover {
                 background: var(--accent-primary);
@@ -491,11 +497,11 @@ function generateModalContent(subject, data) {
             .past-papers-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-                gap: 0.5rem;
+                gap: 0.625rem;
             }
             .paper-link {
                 display: block;
-                padding: 0.5rem;
+                padding: 0.625rem 0.75rem;
                 background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
                 color: white;
                 text-align: center;
