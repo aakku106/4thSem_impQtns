@@ -616,15 +616,6 @@ function generateModalContent(subject, data) {
         <p class="modal-description">${
           data.description
         }</p>        <div class="modal-section">
-            <h3>Syllabus</h3>
-            <button class="resource-link" onclick="viewContent('${
-              data.syllabus
-            }', 'Syllabus - ${data.name}')">
-                View Complete Syllabus
-            </button>
-        </div>
-        
-        <div class="modal-section">
             <h3>Important Questions</h3>
             <div class="resource-grid">
                 ${data.questions
@@ -652,6 +643,15 @@ function generateModalContent(subject, data) {
                   )
                   .join("")}
             </div>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Syllabus</h3>
+            <button class="resource-link" onclick="viewContent('${
+              data.syllabus
+            }', 'Syllabus - ${data.name}')">
+                View Complete Syllabus
+            </button>
         </div>
         
         ${
@@ -701,6 +701,8 @@ function generateModalContent(subject, data) {
             #subjectModalBody {
                 text-align: left;
                 padding: 0;
+                max-height: 80vh;
+                overflow-y: auto;
             }
             
             .subject-modal-wrapper {
