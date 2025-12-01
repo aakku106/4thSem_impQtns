@@ -139,6 +139,56 @@
         font-size: 1.125rem;
       }
 
+      /* Loading Skeletons */
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          var(--bg-secondary) 0%,
+          var(--bg-tertiary) 50%,
+          var(--bg-secondary) 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+        border-radius: var(--radius-md);
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      .skeleton-text {
+        height: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .skeleton-text:last-child {
+        width: 60%;
+      }
+
+      .skeleton-heading {
+        height: 2rem;
+        width: 40%;
+        margin-bottom: 1rem;
+      }
+
+      .skeleton-card {
+        padding: 1.5rem;
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-color);
+      }
+
+      .skeleton-paragraph {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
       .error {
         text-align: center;
         padding: 4rem 2rem;
@@ -388,7 +438,26 @@
     </div>
 
     <div class="viewer-container">
-      <div id="content" class="loading">Loading document...</div>
+      <div id="content">
+        <!-- Loading Skeleton -->
+        <div class="skeleton-card">
+          <div class="skeleton skeleton-heading"></div>
+          <div class="skeleton-paragraph">
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" style="margin-top: 1.5rem;">
+          <div class="skeleton skeleton-heading"></div>
+          <div class="skeleton-paragraph">
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>

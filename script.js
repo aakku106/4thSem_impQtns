@@ -148,7 +148,7 @@ function buildSearchIndex() {
 
   subjects.forEach((subject) => {
     const data = getSubjectData(subject);
-    
+
     // Add syllabus
     searchIndex.push({
       subject,
@@ -165,7 +165,8 @@ function buildSearchIndex() {
         title: `${data.name} - ${q.type}`,
         path: q.path,
         type: q.type,
-        keywords: `${data.name} ${q.type} ${subject} important questions`.toLowerCase(),
+        keywords:
+          `${data.name} ${q.type} ${subject} important questions`.toLowerCase(),
       });
     });
 
@@ -176,7 +177,8 @@ function buildSearchIndex() {
         title: `${data.name} - ${p.year}`,
         path: p.path,
         type: "Past Paper",
-        keywords: `${data.name} ${p.year} ${subject} past paper question`.toLowerCase(),
+        keywords:
+          `${data.name} ${p.year} ${subject} past paper question`.toLowerCase(),
       });
     });
 
@@ -293,13 +295,21 @@ function performSearch(query) {
   searchResults.innerHTML = results
     .map(
       (item) => `
-    <div class="search-result-item" onclick="openSearchResult('${item.path}', '${item.title.replace(/'/g, "\\'")}')">
+    <div class="search-result-item" onclick="openSearchResult('${
+      item.path
+    }', '${item.title.replace(/'/g, "\\'")}')">
       <div class="search-result-header">
-        <h3 class="search-result-title">${highlightText(item.title, searchTerm)}</h3>
+        <h3 class="search-result-title">${highlightText(
+          item.title,
+          searchTerm
+        )}</h3>
         <span class="search-result-badge">${item.subject}</span>
       </div>
       <p class="search-result-path">${item.type}</p>
-      <p class="search-result-snippet">${highlightText(item.keywords, searchTerm)}</p>
+      <p class="search-result-snippet">${highlightText(
+        item.keywords,
+        searchTerm
+      )}</p>
     </div>
   `
     )
