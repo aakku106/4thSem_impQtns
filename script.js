@@ -20,6 +20,16 @@ themeToggle.addEventListener("click", () => {
 // Smooth Scrolling & Active Nav Links
 // ============================================
 const navLinks = document.querySelectorAll(".nav-link");
+const hamburger = document.getElementById("hamburger");
+const navLinksContainer = document.querySelector(".nav-links");
+
+// Hamburger menu toggle
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinksContainer.classList.toggle("active");
+  });
+}
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -33,6 +43,12 @@ navLinks.forEach((link) => {
       // Update active link
       navLinks.forEach((l) => l.classList.remove("active"));
       link.classList.add("active");
+
+      // Close mobile menu
+      if (hamburger && navLinksContainer) {
+        hamburger.classList.remove("active");
+        navLinksContainer.classList.remove("active");
+      }
     }
   });
 });
@@ -67,6 +83,201 @@ function viewContent(path, title) {
   )}&title=${encodeURIComponent(title)}`;
   window.open(url, "_blank");
 }
+
+// ============================================
+// Search Functionality
+// ============================================
+const searchOverlay = document.getElementById("searchOverlay");
+const searchToggle = document.getElementById("searchToggle");
+const searchClose = document.getElementById("searchClose");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+const filterBtns = document.querySelectorAll(".filter-btn");
+
+let currentFilter = "all";
+let searchIndex = [];
+
+// Build search index
+function buildSearchIndex() {
+  const subjects = ["AI", "CN", "DBMS", "OS", "TOC"];
+  searchIndex = [];
+
+  subjects.forEach((subject) => {
+    const data = getSubjectData(subject);
+    
+    // Add syllabus
+    searchIndex.push({
+      subject,
+      title: `${data.name} - Syllabus`,
+      path: data.syllabus,
+      type: "Syllabus",
+      keywords: `${data.name} syllabus ${subject}`.toLowerCase(),
+    });
+
+    // Add important questions
+    data.questions.forEach((q) => {
+      searchIndex.push({
+        subject,
+        title: `${data.name} - ${q.type}`,
+        path: q.path,
+        type: q.type,
+        keywords: `${data.name} ${q.type} ${subject} important questions`.toLowerCase(),
+      });
+    });
+
+    // Add past papers
+    data.pastPapers.forEach((p) => {
+      searchIndex.push({
+        subject,
+        title: `${data.name} - ${p.year}`,
+        path: p.path,
+        type: "Past Paper",
+        keywords: `${data.name} ${p.year} ${subject} past paper question`.toLowerCase(),
+      });
+    });
+
+    // Add emergency plans
+    if (data.emergency) {
+      data.emergency.forEach((e) => {
+        searchIndex.push({
+          subject,
+          title: e.title,
+          path: e.path,
+          type: "2-Day Plan",
+          keywords: `${e.title} ${subject} emergency 2 day plan`.toLowerCase(),
+        });
+      });
+    }
+
+    // Add examples
+    if (data.examples) {
+      data.examples.forEach((e) => {
+        searchIndex.push({
+          subject,
+          title: e.title,
+          path: e.path,
+          type: "Example",
+          keywords: `${e.title} ${subject} example solution`.toLowerCase(),
+        });
+      });
+    }
+  });
+}
+
+// Open search
+searchToggle.addEventListener("click", () => {
+  searchOverlay.classList.add("active");
+  searchInput.focus();
+  document.body.style.overflow = "hidden";
+});
+
+// Close search
+searchClose.addEventListener("click", () => {
+  searchOverlay.classList.remove("active");
+  searchInput.value = "";
+  currentFilter = "all";
+  filterBtns.forEach((btn) => btn.classList.remove("active"));
+  filterBtns[0].classList.add("active");
+  document.body.style.overflow = "auto";
+});
+
+// Close with Escape key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && searchOverlay.classList.contains("active")) {
+    searchClose.click();
+  }
+});
+
+// Close when clicking outside
+searchOverlay.addEventListener("click", (e) => {
+  if (e.target === searchOverlay) {
+    searchClose.click();
+  }
+});
+
+// Filter buttons
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    currentFilter = btn.dataset.filter;
+    performSearch(searchInput.value);
+  });
+});
+
+// Search input
+searchInput.addEventListener("input", (e) => {
+  performSearch(e.target.value);
+});
+
+// Perform search
+function performSearch(query) {
+  if (!query.trim()) {
+    searchResults.innerHTML = `
+      <div class="search-empty">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="21" cy="21" r="12" stroke="currentColor" stroke-width="3"/>
+          <path d="M30 30L40 40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p>Start typing to search...</p>
+      </div>
+    `;
+    return;
+  }
+
+  const searchTerm = query.toLowerCase();
+  let results = searchIndex.filter((item) => {
+    const matchesFilter =
+      currentFilter === "all" || item.subject === currentFilter;
+    const matchesQuery = item.keywords.includes(searchTerm);
+    return matchesFilter && matchesQuery;
+  });
+
+  if (results.length === 0) {
+    searchResults.innerHTML = `
+      <div class="search-empty">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="21" cy="21" r="12" stroke="currentColor" stroke-width="3"/>
+          <path d="M30 30L40 40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p>No results found for "${query}"</p>
+      </div>
+    `;
+    return;
+  }
+
+  searchResults.innerHTML = results
+    .map(
+      (item) => `
+    <div class="search-result-item" onclick="openSearchResult('${item.path}', '${item.title.replace(/'/g, "\\'")}')">
+      <div class="search-result-header">
+        <h3 class="search-result-title">${highlightText(item.title, searchTerm)}</h3>
+        <span class="search-result-badge">${item.subject}</span>
+      </div>
+      <p class="search-result-path">${item.type}</p>
+      <p class="search-result-snippet">${highlightText(item.keywords, searchTerm)}</p>
+    </div>
+  `
+    )
+    .join("");
+}
+
+// Highlight matching text
+function highlightText(text, query) {
+  const regex = new RegExp(`(${query})`, "gi");
+  return text.replace(regex, "<mark>$1</mark>");
+}
+
+// Open search result
+function openSearchResult(path, title) {
+  viewContent(path, title);
+  searchClose.click();
+}
+
+// Initialize search on page load
+document.addEventListener("DOMContentLoaded", () => {
+  buildSearchIndex();
+});
 
 // ============================================
 // Subject Modal Functionality
