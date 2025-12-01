@@ -374,7 +374,7 @@
         mangle: false,
       });
 
-      // Initialize Mermaid
+      // Initialize Mermaid - configure before rendering
       mermaid.initialize({
         startOnLoad: false,
         theme:
@@ -382,6 +382,10 @@
             ? "dark"
             : "default",
         securityLevel: "loose",
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+        },
       });
 
       // Get file path from URL
@@ -410,33 +414,35 @@
             return response.text();
           })
           .then((markdown) => {
-            const html = marked.parse(markdown);
+            // Custom preprocessing: Replace ```mermaid code blocks with <pre class="mermaid">
+            const processedMarkdown = markdown.replace(
+              /```mermaid\n([\s\S]*?)```/g,
+              '<pre class="mermaid">$1</pre>'
+            );
+
+            const html = marked.parse(processedMarkdown);
             contentDiv.innerHTML = `<div class="markdown-content">${html}</div>`;
 
-            // Convert mermaid code blocks to mermaid divs
-            const codeBlocks = contentDiv.querySelectorAll(
-              "pre code.language-mermaid"
-            );
-            codeBlocks.forEach((block, index) => {
-              const mermaidCode = block.textContent;
-              const mermaidDiv = document.createElement("div");
-              mermaidDiv.className = "mermaid";
-              mermaidDiv.setAttribute("data-processed", "false");
-              mermaidDiv.textContent = mermaidCode;
-              block.parentElement.replaceWith(mermaidDiv);
-            });
+            // Initialize and render mermaid diagrams
+            const mermaidElements = contentDiv.querySelectorAll(".mermaid");
+            if (mermaidElements.length > 0) {
+              mermaidElements.forEach((element, index) => {
+                const graphDefinition = element.textContent.trim();
+                const uniqueId = `mermaid-${Date.now()}-${index}`;
+                element.id = uniqueId;
 
-            // Render all mermaid diagrams
-            mermaid
-              .run({
-                querySelector: '.mermaid[data-processed="false"]',
-              })
-              .then(() => {
-                // Mark as processed
-                contentDiv.querySelectorAll(".mermaid").forEach((el) => {
-                  el.setAttribute("data-processed", "true");
-                });
+                try {
+                  mermaid
+                    .render(uniqueId + "-svg", graphDefinition)
+                    .then(({ svg }) => {
+                      element.innerHTML = svg;
+                    });
+                } catch (error) {
+                  console.error("Mermaid rendering error:", error);
+                  element.innerHTML = `<p style="color: red;">Error rendering diagram</p>`;
+                }
               });
+            }
 
             // Update title if not provided
             if (!title) {
