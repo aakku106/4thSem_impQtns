@@ -130,11 +130,13 @@ _Last Updated: [Date]_
    - Commit with clear messages
 
 4. **Push & PR**
+
    ```bash
    git add .
    git commit -m "Fix: description of changes"
    git push origin fix/describe-your-change
    ```
+
    - Go to GitHub and create Pull Request
    - Describe your changes clearly
    - Wait for review
@@ -154,4 +156,4 @@ _Last Updated: [Date]_
 
 ---
 
-**Thank you for helping make exam prep better for everyone! **
+**Thank you for helping make exam prep better for everyone!**
