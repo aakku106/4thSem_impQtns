@@ -376,9 +376,9 @@ function getSubjectData(subject) {
         "Explore intelligent agents, search algorithms, knowledge representation, and machine learning.",
       syllabus: "AI/qtn_sets_and_syllabus/syllabus.md",
       questions: [
-        { type: "CS 4.5 Marks", path: "AI/imp_qtns/CS4.5.md" },
-        { type: "Group 2.5 Marks", path: "AI/imp_qtns/G2.5_p.md" },
-        { type: "Group 5 Marks", path: "AI/imp_qtns/G5.md" },
+        { type: "Claude Sonnet 4.5 Analysis", path: "AI/imp_qtns/CS4.5.md" },
+        { type: "Gemini 2.5 Pro Analysis", path: "AI/imp_qtns/G2.5_p.md" },
+        { type: "GPT-5 Analysis", path: "AI/imp_qtns/G5.md" },
       ],
       pastPapers: [
         { year: "2081", path: "AI/qtn_sets_and_syllabus/2081.md" },
@@ -416,9 +416,9 @@ function getSubjectData(subject) {
         "Master network protocols, architecture, and communication systems.",
       syllabus: "CN/qtn_sets_and_syllabus/syllabus.md",
       questions: [
-        { type: "CS 4.5 Marks", path: "CN/imp_qtns/CS4.5.md" },
-        { type: "Group 2.5 Marks", path: "CN/imp_qtns/G2.5_p.md" },
-        { type: "Group 5 Marks", path: "CN/imp_qtns/G5.md" },
+        { type: "Claude Sonnet 4.5 Analysis", path: "CN/imp_qtns/CS4.5.md" },
+        { type: "Gemini 2.5 Pro Analysis", path: "CN/imp_qtns/G2.5_p.md" },
+        { type: "GPT-5 Analysis", path: "CN/imp_qtns/G5.md" },
       ],
       pastPapers: [
         { year: "2081", path: "CN/qtn_sets_and_syllabus/2081.md" },
@@ -466,9 +466,9 @@ function getSubjectData(subject) {
         "Learn database design, SQL, normalization, and transaction management.",
       syllabus: "DBMS/qtn_sets_ans_syllabus/syllabus.md",
       questions: [
-        { type: "CS 4.5 Marks", path: "DBMS/imp_qtns/CS4.5.md" },
-        { type: "Group 2.5 Marks", path: "DBMS/imp_qtns/G2.5_p.md" },
-        { type: "Group 5 Marks", path: "DBMS/imp_qtns/G5.md" },
+        { type: "Claude Sonnet 4.5 Analysis", path: "DBMS/imp_qtns/CS4.5.md" },
+        { type: "Gemini 2.5 Pro Analysis", path: "DBMS/imp_qtns/G2.5_p.md" },
+        { type: "GPT-5 Analysis", path: "DBMS/imp_qtns/G5.md" },
       ],
       pastPapers: [
         { year: "2081", path: "DBMS/qtn_sets_ans_syllabus/2081.md" },
@@ -510,9 +510,9 @@ function getSubjectData(subject) {
         "Understand process management, memory management, and system calls.",
       syllabus: "OS/qtn_sets_and_syllabus/syllabus.md",
       questions: [
-        { type: "CS 4.5 Marks", path: "OS/imp_qtns/CS4.5.md" },
-        { type: "Group 2.5 Marks", path: "OS/imp_qtns/G2.5_p.md" },
-        { type: "Group 5 Marks", path: "OS/imp_qtns/G5.md" },
+        { type: "Claude Sonnet 4.5 Analysis", path: "OS/imp_qtns/CS4.5.md" },
+        { type: "Gemini 2.5 Pro Analysis", path: "OS/imp_qtns/G2.5_p.md" },
+        { type: "GPT-5 Analysis", path: "OS/imp_qtns/G5.md" },
       ],
       pastPapers: [
         { year: "2081", path: "OS/qtn_sets_and_syllabus/2081.md" },
@@ -565,9 +565,9 @@ function getSubjectData(subject) {
         "Study automata theory, formal languages, and computational complexity.",
       syllabus: "TOC/qtn_sets_and_syllabus/syllabus.md",
       questions: [
-        { type: "CS 4.5 Marks", path: "TOC/imp_qtns/CS4.5.md" },
-        { type: "Group 2.5 Marks", path: "TOC/imp_qtns/G2.5_p.md" },
-        { type: "Group 5 Marks", path: "TOC/imp_qtns/G5.md" },
+        { type: "Claude Sonnet 4.5 Analysis", path: "TOC/imp_qtns/CS4.5.md" },
+        { type: "Gemini 2.5 Pro Analysis", path: "TOC/imp_qtns/G2.5_p.md" },
+        { type: "GPT-5 Analysis", path: "TOC/imp_qtns/G5.md" },
       ],
       pastPapers: [
         { year: "2081", path: "TOC/qtn_sets_and_syllabus/2081.md" },
@@ -700,48 +700,65 @@ function generateModalContent(subject, data) {
         <style>
             #subjectModalBody {
                 text-align: left;
+                padding: 0;
             }
+            
+            .subject-modal-wrapper {
+                padding: 2rem;
+                max-width: 100%;
+            }
+            
             .modal-header-content {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-bottom: 1rem;
-                padding-bottom: 1rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 1.5rem;
                 border-bottom: 1px solid var(--border-color);
+                gap: 1rem;
             }
+            
             .modal-header-content h2 {
                 margin: 0;
-                font-size: 1.5rem;
-                font-weight: 600;
-                letter-spacing: -0.02em;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: -0.03em;
+                color: var(--text-primary);
+                line-height: 1.2;
             }
+            
             .modal-description {
                 color: var(--text-secondary);
-                margin: 1rem 0 2rem 0;
+                margin: 0 0 2.5rem 0;
                 line-height: 1.6;
-                font-size: 0.9375rem;
+                font-size: 1rem;
             }
+            
             .modal-section {
                 margin-bottom: 2.5rem;
             }
+            
             .modal-section:last-child {
                 margin-bottom: 0;
             }
+            
             .modal-section h3 {
                 color: var(--text-primary);
-                margin: 0 0 1rem 0;
-                font-size: 1.125rem;
+                margin: 0 0 1.25rem 0;
+                font-size: 1.25rem;
                 font-weight: 600;
-                letter-spacing: -0.01em;
+                letter-spacing: -0.02em;
             }
+            
             .resource-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 0.875rem;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 1rem;
             }
+            
             .resource-link {
                 display: block;
-                padding: 0.875rem 1.125rem;
+                padding: 1rem 1.25rem;
                 background: var(--bg-secondary);
                 border: 1px solid var(--border-color);
                 border-radius: var(--radius-md);
@@ -752,42 +769,83 @@ function generateModalContent(subject, data) {
                 font-size: 0.9375rem;
                 text-align: left;
                 font-weight: 500;
+                line-height: 1.5;
             }
+            
             .resource-link:hover {
                 background: var(--accent-primary);
                 color: white;
                 transform: translateY(-2px);
                 border-color: var(--accent-primary);
+                box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
             }
+            
             .past-papers-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-                gap: 0.625rem;
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                gap: 0.75rem;
             }
+            
             .paper-link {
                 display: block;
-                padding: 0.625rem 0.75rem;
+                padding: 0.875rem 1rem;
                 background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
                 color: white;
                 text-align: center;
                 border-radius: var(--radius-md);
                 text-decoration: none;
-                font-weight: 500;
-                transition: transform var(--transition-fast);
+                font-weight: 600;
+                transition: all var(--transition-fast);
                 border: none;
                 cursor: pointer;
-                font-size: 0.875rem;
+                font-size: 0.9375rem;
+                line-height: 1.4;
             }
+            
             .paper-link:hover {
-                transform: scale(1.05);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
             }
+            
             .resource-list-modal {
                 display: flex;
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: 0.75rem;
             }
-            .subject-modal-wrapper {
-                text-align: left;
+            
+            @media (max-width: 768px) {
+                .subject-modal-wrapper {
+                    padding: 1.5rem;
+                }
+                
+                .modal-header-content {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                }
+                
+                .modal-header-content h2 {
+                    font-size: 1.5rem;
+                }
+                
+                .modal-section h3 {
+                    font-size: 1.125rem;
+                }
+                
+                .resource-grid {
+                    grid-template-columns: 1fr;
+                    gap: 0.75rem;
+                }
+                
+                .past-papers-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+                    gap: 0.5rem;
+                }
+                
+                .paper-link {
+                    padding: 0.75rem 0.875rem;
+                    font-size: 0.875rem;
+                }
             }
         </style>
     `;
