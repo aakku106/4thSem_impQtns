@@ -2,11 +2,11 @@
 
 ![](https://komarev.com/ghpvc/?username=4thsem&abbreviated=true&base=1&label=Reppo+VIEWS&style=for-the-badge)
 
-## 📚 Overview
+## Overview
 
 This repository contains comprehensive exam preparation materials for 4th semester BSc.CSIT students, carefully curated and analyzed using multiple advanced AI models.
 
-### 🤖 Analysis Methodology
+### Analysis Methodology
 
 The materials were created by analyzing:
 
@@ -14,7 +14,7 @@ The materials were created by analyzing:
 - Current syllabus structure
 - Chapter-wise importance and frequency patterns
 
-### 🎯 AI Models Used for Analysis
+### AI Models Used for Analysis
 
 The content has been verified and enhanced using multiple state-of-the-art AI models:
 
@@ -24,7 +24,7 @@ The content has been verified and enhanced using multiple state-of-the-art AI mo
 - Gemini 2.5 Pro
 - Other specialized AI models
 
-### 📊 Features
+### Features
 
 - Chapter-wise important questions
 - Frequency analysis of questions
@@ -33,7 +33,7 @@ The content has been verified and enhanced using multiple state-of-the-art AI mo
 - Topic prioritization
 - Exam strategies
 
-### 📂 Repository Structure
+### Repository Structure
 
 ```
 .
@@ -44,13 +44,13 @@ The content has been verified and enhanced using multiple state-of-the-art AI mo
 └── README.md                    # Project overview
 ```
 
-### 🎓 Target Audience
+### Target Audience
 
 - BSc.CSIT 4th semester students
 - Focus on scoring 35+ marks
 - Practical-oriented study approach
 
-### 📈 Success Strategy
+### Success Strategy
 
 The materials are designed with a focus on:
 
@@ -59,7 +59,7 @@ The materials are designed with a focus on:
 - Practical exam strategies
 - Strategic topic selection
 
-### ⚠️ Disclaimer
+### ⚠Disclaimer
 
 While these materials are thoroughly analyzed and verified, students should:
 
@@ -68,7 +68,7 @@ While these materials are thoroughly analyzed and verified, students should:
 - Practice previous year questions
 - Consult with faculty members
 
-## 📝 License
+## License
 
 This material is for educational purposes only. Please use responsibly and maintain academic integrity.
 

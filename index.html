@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4th Sem BSc.CSIT Exam Prep | Study Materials & Resources</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>4th Sem Exam Prep</h1>
+          <span class="badge">BSc.CSIT</span>
+        </div>
+        <div class="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#subjects" class="nav-link">Subjects</a>
+          <a href="#emergency" class="nav-link">2-Day Plan</a>
+          <a href="#about" class="nav-link">About</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Ace Your 4th Semester Exams</h1>
+          <p class="hero-subtitle">
+            Comprehensive study materials analyzed by advanced AI models
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Subjects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Past Papers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">35+</span>
+              <span class="stat-label">Target Score</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a href="#subjects" class="btn btn-primary">Start Studying</a>
+            <a href="#emergency" class="btn btn-secondary">Emergency Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Why This Resource?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI-Analyzed Content</h3>
+            <p>
+              Materials verified using Claude Sonnet 4.5, GPT-5, Grok, and
+              Gemini 2.5 Pro
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Frequency Analysis</h3>
+            <p>
+              Questions analyzed from 2076-2081 papers for maximum efficiency
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Strategic Focus</h3>
+            <p>High-frequency questions with maximum marks return</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Emergency Plans</h3>
+            <p>2-day survival guides for last-minute preparation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="subjects">
+      <div class="container">
+        <h2 class="section-title">Choose Your Subject</h2>
+        <div class="subjects-grid">
+          <!-- AI Card -->
+          <div class="subject-card" data-subject="AI">
+            <div class="subject-header">
+              <h3>Artificial Intelligence</h3>
+              <span class="subject-code">CSC 303</span>
+            </div>
+            <div class="subject-content">
+              <ul class="resource-list">
+                <li>📄 Syllabus & Past Papers</li>
+                <li>⭐ Important Questions (CS4.5, G2.5, G5)</li>
+                <li>⚡ 2-Day Emergency Plan</li>
+                <li>✅ Solved Examples</li>
+              </ul>
+              <div class="subject-tags">
+                <span class="tag">FOPL Resolution</span>
+                <span class="tag">Informed Search</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" onclick="openSubject('AI')">
+              Explore AI
+            </button>
+          </div>
+
+          <!-- CN Card -->
+          <div class="subject-card" data-subject="CN">
+            <div class="subject-header">
+              <h3>Computer Networks</h3>
+              <span class="subject-code">CSC 304</span>
+            </div>
+            <div class="subject-content">
+              <ul class="resource-list">
+                <li>📄 Syllabus & Past Papers</li>
+                <li>⭐ Important Questions (CS4.5, G2.5, G5)</li>
+                <li>⚡ 2-Day Emergency Plan</li>
+                <li>📚 Detailed Explanations</li>
+              </ul>
+              <div class="subject-tags">
+                <span class="tag">IPv4 vs IPv6</span>
+                <span class="tag">TCP/UDP</span>
+                <span class="tag">Subnetting</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" onclick="openSubject('CN')">
+              Explore CN
+            </button>
+          </div>
+
+          <!-- DBMS Card -->
+          <div class="subject-card" data-subject="DBMS">
+            <div class="subject-header">
+              <h3>Database Management System</h3>
+              <span class="subject-code">CSC 305</span>
+            </div>
+            <div class="subject-content">
+              <ul class="resource-list">
+                <li>📄 Syllabus & Past Papers</li>
+                <li>⭐ Important Questions (CS4.5, G2.5, G5)</li>
+                <li>⚡ 2-Day Emergency Plan</li>
+                <li>💻 SQL Solutions</li>
+              </ul>
+              <div class="subject-tags">
+                <span class="tag">SQL Queries</span>
+                <span class="tag">Normalization</span>
+                <span class="tag">ACID</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" onclick="openSubject('DBMS')">
+              Explore DBMS
+            </button>
+          </div>
+
+          <!-- OS Card -->
+          <div class="subject-card" data-subject="OS">
+            <div class="subject-header">
+              <h3>Operating System</h3>
+              <span class="subject-code">CSC 306</span>
+            </div>
+            <div class="subject-content">
+              <ul class="resource-list">
+                <li>📄 Syllabus & Past Papers</li>
+                <li>⭐ Important Questions (CS4.5, G2.5, G5)</li>
+                <li>⚡ 2-Day Emergency Plan</li>
+                <li>📊 Algorithm Examples</li>
+              </ul>
+              <div class="subject-tags">
+                <span class="tag">CPU Scheduling</span>
+                <span class="tag">Deadlock</span>
+                <span class="tag">Paging</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" onclick="openSubject('OS')">
+              Explore OS
+            </button>
+          </div>
+
+          <!-- TOC Card -->
+          <div class="subject-card" data-subject="TOC">
+            <div class="subject-header">
+              <h3>Theory of Computation</h3>
+              <span class="subject-code">CSC 307</span>
+            </div>
+            <div class="subject-content">
+              <ul class="resource-list">
+                <li>📄 Syllabus & Past Papers</li>
+                <li>⭐ Important Questions (CS4.5, G2.5, G5)</li>
+                <li>⚡ 2-Day Emergency Plan</li>
+                <li>✅ Solved Examples</li>
+              </ul>
+              <div class="subject-tags">
+                <span class="tag">Pumping Lemma</span>
+                <span class="tag">CFG</span>
+                <span class="tag">Thompson</span>
+              </div>
+            </div>
+            <button class="btn btn-outline" onclick="openSubject('TOC')">
+              Explore TOC
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Plan Section -->
+    <section id="emergency" class="emergency">
+      <div class="container">
+        <div class="emergency-header">
+          <h2 class="section-title">⚡ 2-Day Emergency Plans</h2>
+          <p class="section-subtitle">
+            Last-minute preparation? We've got you covered!
+          </p>
+        </div>
+        <div class="emergency-grid">
+          <div class="emergency-card">
+            <h3>AI - 2 Day Plan</h3>
+            <p>FOPL Resolution, Informed Search, Short Question Cheatsheet</p>
+            <a href="AI/imp_qtns/2DayPrep/README.md" class="btn btn-small"
+              >View Plan</a
+            >
+          </div>
+          <div class="emergency-card">
+            <h3>CN - 2 Day Plan</h3>
+            <p>IPv4/IPv6, TCP/UDP, Subnetting, Traffic Shaping</p>
+            <a href="CN/imp_qtns/2DayPrep/README.md" class="btn btn-small"
+              >View Plan</a
+            >
+          </div>
+          <div class="emergency-card">
+            <h3>DBMS - 2 Day Plan</h3>
+            <p>SQL Queries, Normalization, ACID Properties</p>
+            <a href="DBMS/imp_qtns/2DayPrep/README.md" class="btn btn-small"
+              >View Plan</a
+            >
+          </div>
+          <div class="emergency-card">
+            <h3>OS - 2 Day Plan</h3>
+            <p>CPU Scheduling, Deadlock, Page Replacement</p>
+            <a href="OS/imp_qtns/2DayPrep/README.md" class="btn btn-small"
+              >View Plan</a
+            >
+          </div>
+          <div class="emergency-card">
+            <h3>TOC - 2 Day Plan</h3>
+            <p>Pumping Lemma, CFG Basics, Chomsky Hierarchy</p>
+            <a
+              href="TOC/imp_qtns/2DayPrep/2_Day_TOC_Survival_Guide.md"
+              class="btn btn-small"
+              >View Plan</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About This Project</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Analysis Methodology</h3>
+            <p>The materials were created by analyzing:</p>
+            <ul>
+              <li>
+                7 sets of previous year questions (2076-2081 + Model Questions)
+              </li>
+              <li>Current syllabus structure</li>
+              <li>Chapter-wise importance and frequency patterns</li>
+            </ul>
+
+            <h3>AI Models Used</h3>
+            <div class="ai-models">
+              <span class="ai-badge">Claude Sonnet 4.5</span>
+              <span class="ai-badge">GPT-5</span>
+              <span class="ai-badge">Grok</span>
+              <span class="ai-badge">Gemini 2.5 Pro</span>
+            </div>
+
+            <h3>Success Strategy</h3>
+            <p>The materials are designed with a focus on:</p>
+            <ul>
+              <li>High-frequency questions</li>
+              <li>Maximum marks return on study time</li>
+              <li>Practical exam strategies</li>
+              <li>Strategic topic selection</li>
+            </ul>
+
+            <div class="disclaimer">
+              <h4>⚠️ Disclaimer</h4>
+              <p>
+                While these materials are thoroughly analyzed and verified,
+                students should use this as a study guide, not as the only study
+                material. Cross-reference with official syllabus and consult
+                with faculty members.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>4th Sem Exam Prep</h3>
+            <p>
+              Comprehensive exam preparation materials for BSc.CSIT students
+            </p>
+            <div class="footer-stats">
+              <img
+                src="https://komarev.com/ghpvc/?username=4thsem&abbreviated=true&base=1&label=Views&style=flat-square"
+                alt="Views" />
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#subjects">All Subjects</a></li>
+              <li><a href="#emergency">Emergency Plans</a></li>
+              <li>
+                <a
+                  href="https://github.com/aakku106/4thSem_impQtns"
+                  target="_blank"
+                  >GitHub Repository</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#syllabus">Syllabus</a></li>
+              <li><a href="#past-papers">Past Papers</a></li>
+              <li><a href="#imp-questions">Important Questions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 4th Sem Exam Prep. For educational purposes only.</p>
+          <p>Last Updated: December 1, 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Subject Modal -->
+    <div id="subjectModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
